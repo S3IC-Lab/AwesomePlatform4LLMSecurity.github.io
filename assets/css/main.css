@@ -15,6 +15,7 @@
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
+  --colors: #4a90e2, #7ed321, #ff4757, #ff7f50, #a05195, #ffd93d;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -2210,4 +2211,82 @@ data-table {
   background-repeat: no-repeat;
   vertical-align: middle;
   margin-right: 2px; /* space between the icon and text */
+}
+
+.container_1 {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  padding: 50px;
+  background: #f5f5f5;
+}
+
+.chart {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.chart::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(var(--segments));
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.chart::after {
+  content: attr(data-total);
+  position: absolute;
+  width: 65%;
+  height: 65%;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.pointer {
+  position: absolute;
+  width: 2px;
+  height: 20%;
+  background: #333;
+  left: 50%;
+  top: 10%;
+  transform-origin: 50% 225%;
+  display: none;
+}
+
+.tooltip {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  display: none;
+  pointer-events: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  max-width: 280px;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  line-height: 1.5;
+}
+
+.tooltip strong {
+  color: #7ed321;
+  display: block;
+  margin-bottom: 6px;
 }
