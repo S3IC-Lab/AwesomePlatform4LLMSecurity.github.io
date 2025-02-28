@@ -21,12 +21,12 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #07467c; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0880e8; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #077c59; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #cfab34; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   --button-color: #575757;
-    --bs-table-striped-bg: #04dfff; /* 自定义条纹背景色 */
+    --bs-table-striped-bg: #fbff04; /* 自定义条纹背景色 */
     --bs-table-striped-color: #000; /* 自定义条纹文字颜色 */
 
 }
@@ -43,7 +43,7 @@
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0880e8; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #a09e19; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -54,10 +54,10 @@
 }
 
 .dark-background {
-  --background-color: #074e8d;
+  --background-color: #078d43;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #0077de;
+  --surface-color: #349741;
   --contrast-color: #ffffff;
 }
 
@@ -114,7 +114,7 @@ h6 {
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
-  background: #059652;
+  background: #056896;
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -302,7 +302,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(49, 108, 145, 0.9);
+  --background-color: rgba(194, 124, 20, 0.9);
 }
 
 /*--------------------------------------------------------------
@@ -1052,7 +1052,7 @@ section,
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0, 0.25); /* 灰色半透明覆盖层 */
-  backdrop-filter: blur(6px); /* 灰色覆盖层上的高斯模糊效果 */
+  backdrop-filter: blur(2px); /* 灰色覆盖层上的高斯模糊效果 */
   z-index: 0;
 }
 
