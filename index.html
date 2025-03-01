@@ -43,6 +43,9 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
 
+  <!-- JS cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.8.0/echarts.min.js" integrity="sha512-OvWfXEXFlgwaMYESoKZRrPGq9Ndjcf7pMgp+NjbUNeqEA1OOOUbLgquJGOzvh7H78qinNObGwRiFIj22es61Eg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- =======================================================
   * Template Name: Anyar
@@ -157,13 +160,12 @@
           </p>
         </div>
         <div class="container_1">
-          <div class="chart" 
-               data-total="100"
-               data-segments='[{"value":75, "label":"Development"}]'>
-            <div class="pointer"></div>
+          <div id="overview" style="height: 250px;width: 400px;"></div>
+          <div id="model" style="height: 250px;width: 400px;"></div>
+          <div id="dataset" style="height: 250px;width: 400px;"></div>
           </div>
         
-          <div class="chart" 
+          <!-- <div class="chart" 
                data-total="200"
                data-segments='[
                  {"value":80, "label":"Marketing"},
@@ -172,7 +174,7 @@
                  {"value":20, "label":"Other"}
                ]'>
             <div class="pointer"></div>
-          </div>
+          </div> -->
         </div>
         
         <div class="tooltip" id="tooltip"></div>
@@ -926,6 +928,11 @@ Jailbreak Attacks</h3>
   <script src="assets/js/anime.js"></script>
   <script src="anime.min.js"></script>
   <script src="assets/js/script.js"></script>
+  <script>
+//     var chartDom = document.getElementById('chart');
+//     // var myChart = echarts.init(chartDom);
+// // myChart.setOption(option);
+  </script>
 
 
 </body>

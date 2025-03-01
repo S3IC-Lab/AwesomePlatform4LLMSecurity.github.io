@@ -1,79 +1,259 @@
-document.querySelectorAll('.chart').forEach(chart => {
-    const total = parseInt(chart.dataset.total);
-    const segments = JSON.parse(chart.dataset.segments);
-    const colors = getComputedStyle(document.documentElement)
-      .getPropertyValue('--colors').split(', ');
-    const pointer = chart.querySelector('.pointer');
-    
-    // 生成渐变背景
-    let accumulated = 0;
-    let gradientParts = [];
-    
-    segments.forEach((segment, index) => {
-      const start = (accumulated / total) * 360;
-      const end = ((accumulated + segment.value) / total) * 360;
-      const color = colors[index % colors.length];
-      
-      gradientParts.push(`${color} ${start}deg ${end}deg`);
-      accumulated += segment.value;
-    });
-  
-    // 单一条目添加灰色背景
-    if (segments.length === 1) {
-      gradientParts.push(`#ddd ${accumulated/total*360}deg 360deg`);
-    }
-  
-    chart.style.setProperty('--segments', gradientParts.join(', '));
-  
-    // 事件处理
-    chart.addEventListener('mousemove', (e) => {
-      const tooltip = document.getElementById('tooltip');
-      const rect = chart.getBoundingClientRect();
-      const centerX = rect.left + rect.width/2;
-      const centerY = rect.top + rect.height/2;
-      
-      // 计算标准化角度（0-360）
-      const angle = Math.atan2(e.clientY - centerY, e.clientX - centerX) * 180 / Math.PI + 90;
-      let normalizedAngle = (angle + 360) % 360;
-      
-      // 修复360度边界问题
-      if (normalizedAngle >= 359.9) normalizedAngle = 0;
-  
-      // 更新指针
-      pointer.style.display = 'block';
-      pointer.style.transform = `rotate(${normalizedAngle}deg)`;
-  
-      // 精确查找数据段
-      let currentStart = 0;
-      let foundSegment = null;
-      
-      for (const [index, segment] of segments.entries()) {
-        const segmentEnd = currentStart + (segment.value / total) * 360;
-        
-        // 处理最后一个数据段的边界
-        const endAngle = index === segments.length - 1 ? 360 : segmentEnd;
-        
-        if (normalizedAngle >= currentStart && normalizedAngle < endAngle) {
-          foundSegment = segment;
-          break;
+function createOverviewChart(overview, finished) {
+  var data = [];
+  var color=['#4cd5fc','#39e07d','#b17dd1','#ffd09c','#ffffa5','#fe3fff']
+  for (var i = 0; i < overview.length; i++) {
+    data.push({
+        value: overview[i].value,
+        name: overview[i].name,
+        itemStyle: {
+            normal: {
+                borderWidth: 5,
+                shadowBlur: 10,
+                borderColor:color[i],
+                shadowColor: color[i]
+            }
         }
-        currentStart = segmentEnd;
-      }
-  
-      if (foundSegment) {
-        const percent = ((foundSegment.value / total) * 100).toFixed(1);
-        tooltip.innerHTML = `
-          <strong>${foundSegment.label}</strong>
-          ${foundSegment.value}/${total} (${percent}%)
-        `;
-        tooltip.style.display = 'block';
-        tooltip.style.left = `${e.clientX + 15}px`;
-        tooltip.style.top = `${e.clientY + 15}px`;
-      }
+    }, {
+        value: 2,
+        name: '',
+        itemStyle: {
+            normal: {
+                label: {
+                    show: false
+                },
+                labelLine: {
+                    show: false
+                },
+                color: 'rgba(0, 0, 0, 0)',
+                borderColor: 'rgba(0, 0, 0, 0)',
+                borderWidth: 0
+            }
+  }
     });
+  }
+  var seriesOption = [{
+    name: '',
+    type: 'pie',
+    clockWise: true,
+    radius: [90, 109],
+    hoverAnimation: true,
+    emphasis: {
+      label: {
+        show: true,
+        fontSize: 20,
+        fontWeight: 'bold'
+      }
+    },
+    itemStyle: {
+        normal: {
+            label: {
+                show: true,
+                position: 'inside',
+                color: '#191a1a',
+                formatter: function(params) {
+                    return params.name;
+                },
+            },
+            labelLine: {
+                length:30,
+                length2:100,
+                show: true,
+                color:'#00ffff'
+            }
+        }
+    },
+    data: data
+  }];
+  option = {
+    backgroundColor: 'transparent',
+    color : color,
+    graphic: {
+    elements: [{
+        type: "image",
+        z: 3,
+        style: {
+            width: 178,
+            height: 178
+        },
+        left: 'center',
+        top:  'center',
+        position: [100, 100]
+    }]
+    },
+    tooltip: {
+        show: true,
+        trigger: 'item',
+        borderWidth: 0,
+        backgroundColor: 'transparent',
+        formatter: function (params) {
+            var total = params.value;
+            var value = finished.find(function (item) {
+                return item.name === params.name;
+            });
+            value = value ? value.value : 0;
+            
+            var percent = (value / total * 100).toFixed(2);
+            var name = params.name;
+            var color = params.color;
   
-    chart.addEventListener('mouseleave', () => {
-      pointer.style.display = 'none';
-      tooltip.style.display = 'none';
+            var darkColor = tinycolor(color).darken(20).toString();
+  
+            return `
+                <div style="
+                    width: 100px;
+                    height: 40px;
+                    background: linear-gradient(to right, ${darkColor} ${percent}%, ${color} ${percent}%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #212529;
+                    font-size: 14px;
+                    font-weight: bold;
+                ">
+                    ${value}/${total}
+                </div>
+            `;
+        }
+    },
+    toolbox: {
+        show: false
+    },
+    series: seriesOption
+  }
+  
+  var chartDom = document.getElementById('overview');
+  
+  var myChart = echarts.init(chartDom);
+  myChart.setOption(option);
+}
+
+function createChart(all, finished, div, color) {
+  var data = [];
+  var color = [color, tinycolor(color).lighten(20).toString()];
+  for (var i = 0; i < 2; i++) {
+    data.push({
+        value: i === 0 ? finished : all - finished,
+        name: i === 0 ? 'Finished' : 'Unfinished',
+        itemStyle: {
+            normal: {
+                borderWidth: 5,
+                shadowBlur: 5,
+                borderColor:color[i],
+                shadowColor: color[i]
+            }
+        }
+    }, {
+        value: 0.2,
+        name: '',
+        itemStyle: {
+            normal: {
+                label: {
+                    show: false
+                },
+                labelLine: {
+                    show: false
+                },
+                color: 'rgba(0, 0, 0, 0)',
+                borderColor: 'rgba(0, 0, 0, 0)',
+                borderWidth: 0
+            }
+  }
     });
-  });
+  }
+  var seriesOption = [{
+    name: '',
+    type: 'pie',
+    clockWise: true,
+    radius: [90, 109],
+    hoverAnimation: true,
+    itemStyle: {
+        normal: {
+            label: {
+                show: false
+            },
+            labelLine: {
+                show: false
+            }
+        }
+    },
+    data: data
+  }];
+  option = {
+    backgroundColor: 'transparent',
+    color : color,
+    title: {
+      text: (div === 'model' ? 'Model' : 'Dataset') + '\n\n' + finished + '/' + all,
+      top: '40%',
+      textAlign: "center",
+      left: "49%",
+      textStyle: {
+          color: 'black',
+          fontSize: 20,
+          fontWeight: '400'
+      }
+    },
+    graphic: {
+    elements: [{
+        type: "image",
+        z: 3,
+        style: {
+            width: 178,
+            height: 178
+        },
+        left: 'center',
+        top:  'center',
+        position: [100, 100]
+    }]
+    },
+    series: seriesOption
+  }
+  
+  var chartDom = document.getElementById(div);
+  
+  var myChart = echarts.init(chartDom);
+  myChart.setOption(option);
+}
+
+var overview = [{
+  name: 'Bias',
+  value: 20
+},{
+  name: 'Hallucination',
+  value: 20
+},{
+  name: 'Judge',
+  value: 30
+},{
+  name: 'Watermark',
+  value: 30
+},{
+  name: 'Privacy',
+  value: 30
+},{
+  name: 'Jailbreak',
+  value: 40
+}];
+
+var finished = [{
+  name: 'Bias',
+  value: 5
+},{
+  name: 'Hallucination',
+  value: 5
+},{
+  name: 'Judge',
+  value: 5
+},{
+  name: 'Watermark',
+  value: 10
+},{
+  name: 'Privacy',
+  value: 5
+},{
+  name: 'Jailbreak',
+  value: 15
+}];
+
+createOverviewChart(overview, finished);
+createChart(20, 5, "model", '#687ad1');
+createChart(50, 10, "dataset", '#fee451');

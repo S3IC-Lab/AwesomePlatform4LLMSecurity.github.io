@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const originY = (logoRect.top + logoRect.height / 2) / window.innerHeight * 100;
 
     // 将 transform-origin 动态设置为 logo 中心的位置
-    shrinkElement.style.transformOrigin = `${originX}% ${originY}%`;
-    console.log(shrinkElement.style.transformOrigin);
+    // shrinkElement.style.transformOrigin = `${originX}% ${originY}%`;
+    // console.log(shrinkElement.style.transformOrigin);
     // 添加 .shrink 类，开始动画
-    shrinkElement.classList.add("shrink");
+    // shrinkElement.classList.add("shrink");
 });
 
 
