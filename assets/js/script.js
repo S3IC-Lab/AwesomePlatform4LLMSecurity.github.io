@@ -1,3 +1,185 @@
+var overview = [{
+  name: 'Bias',
+  value: 20
+},{
+  name: 'Hallucination',
+  value: 20
+},{
+  name: 'Judge',
+  value: 30
+},{
+  name: 'Watermark',
+  value: 30
+},{
+  name: 'Privacy',
+  value: 30
+},{
+  name: 'Jailbreak',
+  value: 40
+}];
+
+var finished = [{
+  name: 'Bias',
+  value: 5
+},{
+  name: 'Hallucination',
+  value: 5
+},{
+  name: 'Judge',
+  value: 5
+},{
+  name: 'Watermark',
+  value: 10
+},{
+  name: 'Privacy',
+  value: 5
+},{
+  name: 'Jailbreak',
+  value: 15
+}];
+
+var select_data = [
+  // Bias
+  [[
+    { id: 1, name: 'Method 1' },
+    { id: 2, name: 'Method 2' },
+    { id: 3, name: 'Method 3' },
+    { id: 4, name: 'Method 4' },
+  ],[
+    {id: 1, name: 'Model 1', method_id: 1},
+    {id: 2, name: 'Model 2', method_id: 1},
+    {id: 3, name: 'Model 3', method_id: 2},
+    {id: 4, name: 'Model 4', method_id: 2},
+    {id: 5, name: 'Model 1', method_id: 3},
+    {id: 6, name: 'Model 2', method_id: 3},
+    {id: 7, name: 'Model 1', method_id: 4},
+  ],[
+    {id: 1, name: 'Dataset 1', model_id: 1},
+    {id: 2, name: 'Dataset 2', model_id: 1},
+    {id: 3, name: 'Dataset 3', model_id: 2},
+    {id: 4, name: 'Dataset 4', model_id: 2},
+    {id: 5, name: 'Dataset 1', model_id: 3},
+    {id: 6, name: 'Dataset 2', model_id: 3},
+  ]],
+  // Hallucination
+  [[
+    { id: 1, name: 'Method 1' },
+    { id: 2, name: 'Method 2' },
+    { id: 3, name: 'Method 3' },
+    { id: 4, name: 'Method 4' },
+  ],[
+    {id: 1, name: 'Model 1', method_id: 1},
+    {id: 2, name: 'Model 2', method_id: 1},
+    {id: 3, name: 'Model 3', method_id: 2},
+    {id: 4, name: 'Model 4', method_id: 2},
+    {id: 5, name: 'Model 1', method_id: 3},
+    {id: 6, name: 'Model 2', method_id: 3},
+    {id: 7, name: 'Model 1', method_id: 4},
+  ],[
+    {id: 1, name: 'Dataset 1', model_id: 1},
+    {id: 2, name: 'Dataset 2', model_id: 1},
+    {id: 3, name: 'Dataset 3', model_id: 2},
+    {id: 4, name: 'Dataset 4', model_id: 2},
+    {id: 5, name: 'Dataset 1', model_id: 3},
+    {id: 6, name: 'Dataset 2', model_id: 3},
+  ]],
+  // Judge
+  [[
+    { id: 1, name: 'Method 1' },
+    { id: 2, name: 'Method 2' },
+    { id: 3, name: 'Method 3' },
+    { id: 4, name: 'Method 4' },
+  ],[
+    {id: 1, name: 'Model 1', method_id: 1},
+    {id: 2, name: 'Model 2', method_id: 1},
+    {id: 3, name: 'Model 3', method_id: 2},
+    {id: 4, name: 'Model 4', method_id: 2},
+    {id: 5, name: 'Model 1', method_id: 3},
+    {id: 6, name: 'Model 2', method_id: 3},
+    {id: 7, name: 'Model 1', method_id: 4},
+  ],[
+    {id: 1, name: 'Dataset 1', model_id: 1},
+    {id: 2, name: 'Dataset 2', model_id: 1},
+    {id: 3, name: 'Dataset 3', model_id: 2},
+    {id: 4, name: 'Dataset 4', model_id: 2},
+    {id: 5, name: 'Dataset 1', model_id: 3},
+    {id: 6, name: 'Dataset 2', model_id: 3},
+  ]],
+  // Watermark
+  [[
+    { id: 1, name: 'Method 1' },
+    { id: 2, name: 'Method 2' },
+    { id: 3, name: 'Method 3' },
+    { id: 4, name: 'Method 4' },
+  ],[
+    {id: 1, name: 'Model 1', method_id: 1},
+    {id: 2, name: 'Model 2', method_id: 1},
+    {id: 3, name: 'Model 3', method_id: 2},
+    {id: 4, name: 'Model 4', method_id: 2},
+    {id: 5, name: 'Model 1', method_id: 3},
+    {id: 6, name: 'Model 2', method_id: 3},
+    {id: 7, name: 'Model 1', method_id: 4},
+  ],[
+    {id: 1, name: 'Dataset 1', model_id: 1},
+    {id: 2, name: 'Dataset 2', model_id: 1},
+    {id: 3, name: 'Dataset 3', model_id: 2},
+    {id: 4, name: 'Dataset 4', model_id: 2},
+    {id: 5, name: 'Dataset 1', model_id: 3},
+    {id: 6, name: 'Dataset 2', model_id: 3},
+  ]],
+  // Privacy
+  [[
+    { id: 1, name: 'Method 1' },
+    { id: 2, name: 'Method 2' },
+    { id: 3, name: 'Method 3' },
+    { id: 4, name: 'Method 4' },
+  ],[
+    {id: 1, name: 'Model 1', method_id: 1},
+    {id: 2, name: 'Model 2', method_id: 1},
+    {id: 3, name: 'Model 3', method_id: 2},
+    {id: 4, name: 'Model 4', method_id: 2},
+    {id: 5, name: 'Model 1', method_id: 3},
+    {id: 6, name: 'Model 2', method_id: 3},
+    {id: 7, name: 'Model 1', method_id: 4},
+  ],[
+    {id: 1, name: 'Dataset 1', model_id: 1},
+    {id: 2, name: 'Dataset 2', model_id: 1},
+    {id: 3, name: 'Dataset 3', model_id: 2},
+    {id: 4, name: 'Dataset 4', model_id: 2},
+    {id: 5, name: 'Dataset 1', model_id: 3},
+    {id: 6, name: 'Dataset 2', model_id: 3},
+  ]],
+  // Jailbreak
+  [[
+    { id: 1, name: 'Method 1' },
+    { id: 2, name: 'Method 2' },
+    { id: 3, name: 'Method 3' },
+    { id: 4, name: 'Method 4' },
+  ],[
+    {id: 1, name: 'Model 1', method_id: 1},
+    {id: 2, name: 'Model 2', method_id: 1},
+    {id: 3, name: 'Model 3', method_id: 2},
+    {id: 4, name: 'Model 4', method_id: 2},
+    {id: 5, name: 'Model 1', method_id: 3},
+    {id: 6, name: 'Model 2', method_id: 3},
+    {id: 7, name: 'Model 1', method_id: 4},
+  ],[
+    {id: 1, name: 'Dataset 1', model_id: 1},
+    {id: 2, name: 'Dataset 2', model_id: 1},
+    {id: 3, name: 'Dataset 3', model_id: 2},
+    {id: 4, name: 'Dataset 4', model_id: 2},
+    {id: 5, name: 'Dataset 1', model_id: 3},
+    {id: 6, name: 'Dataset 2', model_id: 3},
+  ]],
+];
+
+var category=['Bias','Hallucination','Judge','Watermark','Privacy','Jailbreak'];
+var color=['#4cd5fc','#39e07d','#b17dd1','#ffd09c','#ffffa5','#fe3fff'];
+
+var arr_method = select_data[0][0];
+var arr_model = select_data[0][1];
+var arr_dataset = select_data[0][2];
+
 function createOverviewChart(overview, finished) {
   var data = [];
   var color=['#4cd5fc','#39e07d','#b17dd1','#ffd09c','#ffffa5','#fe3fff']
@@ -216,99 +398,115 @@ function createChart(all, finished, div, color) {
   myChart.setOption(option);
 }
 
-var overview = [{
-  name: 'Bias',
-  value: 20
-},{
-  name: 'Hallucination',
-  value: 20
-},{
-  name: 'Judge',
-  value: 30
-},{
-  name: 'Watermark',
-  value: 30
-},{
-  name: 'Privacy',
-  value: 30
-},{
-  name: 'Jailbreak',
-  value: 40
-}];
+function addDataMethod() {
+  var html = "<option value='0'>please select method</option>";
+  var length = arr_method.length;
+  for (var i = 0; i < length; i++) {
+      html += "<option value='" + arr_method[i].id + "'>" + arr_method[i].name + "</option>";
+  }
+  select_method.innerHTML = html;
+}
 
-var finished = [{
-  name: 'Bias',
-  value: 5
-},{
-  name: 'Hallucination',
-  value: 5
-},{
-  name: 'Judge',
-  value: 5
-},{
-  name: 'Watermark',
-  value: 10
-},{
-  name: 'Privacy',
-  value: 5
-},{
-  name: 'Jailbreak',
-  value: 15
-}];
+function addDataModel(methodId) {
+  var html = "<option value='0'>please select model</option>";
+  var length = arr_model.length;
+  
+  for (var i = 0; i < length; i++) {
+      var obj = arr_model[i];
+      if (obj.method_id == methodId) {
+          html += "<option value='" + obj.id + "'>" + obj.name + "</option>";
+      }
+  }
+  select_model.innerHTML = html;
+}
+
+function addDataDataset(modelId) {
+  var html = "<option value='0'>please select dataset</option>";
+  var length = arr_dataset.length;
+  for (var i = 0; i < length; i++) {
+      var obj = arr_dataset[i];
+      if (obj.model_id == modelId) {
+          html += "<option value='" + obj.id + "'>" + obj.name + "</option>";
+      }
+  }
+  select_dataset.innerHTML = html;
+}
+
+function getFirstData(type = 'Bias') {
+  arr_method = select_data[category.indexOf(type)][0];
+  arr_model = select_data[category.indexOf(type)][1];
+  arr_dataset = select_data[category.indexOf(type)][2];
+
+  var select_method = document.getElementById('select_method');
+  var select_model = document.getElementById('select_model');
+  var select_dataset = document.getElementById('select_dataset');
+  var html = "<option value='0'>please select dataset</option>";
+  select_dataset.innerHTML = html;
+  html = "<option value='0'>please select model</option>";
+  select_model.innerHTML = html;
+    select_method.onchange = function () {
+      var methodId = select_method.value;
+      addDataModel(methodId);
+  };
+
+  select_model.onchange = function () {
+      var modelId = select_model.value;
+      addDataDataset(modelId);
+  };
+
+  addDataMethod();
+}
+
+function createTabs() {
+  const tabLinks = document.querySelectorAll('.tab a');
+  tabLinks.forEach(link => {
+      color_this = color[category.indexOf(link.getAttribute('href').substring(1))];
+      link.style.backgroundColor = tinycolor(color_this).lighten(10).toString();
+      link.addEventListener('click', function (event) {
+          event.preventDefault();
+          tabLinks.forEach(tab => {
+            tab.style.height = '50px';
+            tab.style.backgroundColor = tinycolor(color[category.indexOf(tab.getAttribute('href').substring(1))]).lighten(10).toString();
+          });
+          c = color[category.indexOf(this.getAttribute('href').substring(1))];
+          this.style.backgroundColor = c;
+          this.style.height = '70px';
+          const targetId = this.getAttribute('href');
+          document.querySelectorAll('.content div').forEach(div => {
+              div.style.display = 'none';
+          });
+          document.querySelector(targetId).style.display = 'block';
+          getFirstData(targetId.substring(1));
+      });
+    });
+    document.querySelector('.tab a[href="#Bias"]').click();
+}
 
 document.addEventListener("DOMContentLoaded", function() {
-  // 获取所有需要懒加载的元素
   const lazySections = document.querySelectorAll('.lazy-section');
-
-  // 创建Intersection Observer实例
   const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
-              // 当元素进入视口时，添加可见类
               entry.target.classList.add('visible');
 
-              // 停止观察该元素，避免重复触发
+              if (entry.target.classList.contains('container_1')) {
+                createOverviewChart(overview, finished);
+                createChart(20, 5, "model", '#687ad1');
+                createChart(50, 10, "dataset", '#fee451');
+              }
+
+              else if (entry.target.classList.contains('container_2')) {
+                createTabs();
+                getFirstData();
+              }
               observer.unobserve(entry.target);
           }
       });
   }, {
       rootMargin: '0px',
-      threshold: 0.1 // 当元素10%进入视口时触发
+      threshold: 0.2
   });
-
-  // 开始观察所有懒加载元素
   lazySections.forEach(section => {
       observer.observe(section);
   });
 });
-
-createOverviewChart(overview, finished);
-createChart(20, 5, "model", '#687ad1');
-createChart(50, 10, "dataset", '#fee451');
-
-var category=['Bias','Hallucination','Judge','Watermark','Privacy','Jailbreak']
-var color=['#4cd5fc','#39e07d','#b17dd1','#ffd09c','#ffffa5','#fe3fff']
-const tabLinks = document.querySelectorAll('.tab a');
-tabLinks.forEach(link => {
-  color_this = color[category.indexOf(link.getAttribute('href').substring(1))];
-  link.style.backgroundColor = tinycolor(color_this).lighten(10).toString();
-  link.addEventListener('click', function (event) {
-      event.preventDefault();
-      tabLinks.forEach(tab => {
-        tab.style.height = '50px';
-        tab.style.backgroundColor = tinycolor(color[category.indexOf(tab.getAttribute('href').substring(1))]).lighten(10).toString();
-      });
-      c = color[category.indexOf(this.getAttribute('href').substring(1))];
-      this.style.backgroundColor = c;
-      this.style.height = '70px';
-      const targetId = this.getAttribute('href');
-      document.querySelectorAll('.content div').forEach(div => {
-          div.style.display = 'none';
-      });
-      document.querySelector(targetId).style.display = 'block';
-  });
-});
-// 设置默认选中的tab为Bias
-document.querySelector('.tab a[href="#Bias"]').click();
-
-// document.querySelector('.tab a').click();

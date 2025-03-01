@@ -2003,8 +2003,6 @@ section,
   color: #856404; /* warning text color */
 }
 
-
-
 /*.custom-table-container {*/
 /*  display: grid;*/
 /*  width: fit-content;*/
@@ -2293,6 +2291,51 @@ data-table {
   display: block;
 }
 
+.container_2 .select_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* 背景色 */
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影 */
+}
+
+.container_2 .select_container div {
+  margin: 0 15px; /* 增加每个 select 之间的间距 */
+}
+
+.container_2 .select_container span {
+  display: block;
+  margin-bottom: 8px; /* 增加标签与 select 之间的距离 */
+  font-size: 18px;
+  color: #333; /* 标签文字颜色 */
+  font-weight: bold;
+}
+
+.container_2 .select_container select {
+  padding: 8px 12px; /* 增加内边距 */
+  font-size: 14px;
+  color: #555; /* 文字颜色 */
+  background-color: #fff; /* 背景色 */
+  border: 1px solid #ccc; /* 边框 */
+  border-radius: 5px; /* 圆角 */
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* 过渡效果 */
+}
+
+.container_2 .select_container select:hover {
+  border-color: #007bff; /* 鼠标悬停时边框颜色 */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* 鼠标悬停时阴影 */
+}
+
+.container_2 .select_container select:focus {
+  outline: none; /* 移除默认的焦点轮廓 */
+  border-color: #007bff; /* 焦点时边框颜色 */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4); /* 焦点时阴影 */
+}
 /* .chart {
   position: relative;
   width: 220px;
