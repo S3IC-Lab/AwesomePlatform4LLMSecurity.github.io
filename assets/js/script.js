@@ -35,13 +35,14 @@ function createOverviewChart(overview, finished) {
     name: '',
     type: 'pie',
     clockWise: true,
-    radius: [90, 109],
+    radius: [80, 109],
     hoverAnimation: true,
     emphasis: {
       label: {
         show: true,
-        fontSize: 20,
-        fontWeight: 'bold'
+        // fontSize: 20,
+        fontWeight: 'bold',
+        position: 'center'
       }
     },
     itemStyle: {
@@ -50,16 +51,17 @@ function createOverviewChart(overview, finished) {
                 show: true,
                 position: 'inside',
                 color: '#191a1a',
+                fontSize: 14,
                 formatter: function(params) {
                     return params.name;
                 },
             },
-            labelLine: {
-                length:30,
-                length2:100,
-                show: true,
-                color:'#00ffff'
-            }
+            // labelLine: {
+            //     length:30,
+            //     length2:100,
+            //     show: true,
+            //     color:'#00ffff'
+            // }
         }
     },
     data: data
@@ -164,7 +166,7 @@ function createChart(all, finished, div, color) {
     name: '',
     type: 'pie',
     clockWise: true,
-    radius: [90, 109],
+    radius: [70, 109],
     hoverAnimation: true,
     itemStyle: {
         normal: {
@@ -254,6 +256,59 @@ var finished = [{
   value: 15
 }];
 
+document.addEventListener("DOMContentLoaded", function() {
+  // 获取所有需要懒加载的元素
+  const lazySections = document.querySelectorAll('.lazy-section');
+
+  // 创建Intersection Observer实例
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              // 当元素进入视口时，添加可见类
+              entry.target.classList.add('visible');
+
+              // 停止观察该元素，避免重复触发
+              observer.unobserve(entry.target);
+          }
+      });
+  }, {
+      rootMargin: '0px',
+      threshold: 0.1 // 当元素10%进入视口时触发
+  });
+
+  // 开始观察所有懒加载元素
+  lazySections.forEach(section => {
+      observer.observe(section);
+  });
+});
+
 createOverviewChart(overview, finished);
 createChart(20, 5, "model", '#687ad1');
 createChart(50, 10, "dataset", '#fee451');
+
+var category=['Bias','Hallucination','Judge','Watermark','Privacy','Jailbreak']
+var color=['#4cd5fc','#39e07d','#b17dd1','#ffd09c','#ffffa5','#fe3fff']
+const tabLinks = document.querySelectorAll('.tab a');
+tabLinks.forEach(link => {
+  color_this = color[category.indexOf(link.getAttribute('href').substring(1))];
+  link.style.backgroundColor = tinycolor(color_this).lighten(10).toString();
+  link.addEventListener('click', function (event) {
+      event.preventDefault();
+      tabLinks.forEach(tab => {
+        tab.style.height = '50px';
+        tab.style.backgroundColor = tinycolor(color[category.indexOf(tab.getAttribute('href').substring(1))]).lighten(10).toString();
+      });
+      c = color[category.indexOf(this.getAttribute('href').substring(1))];
+      this.style.backgroundColor = c;
+      this.style.height = '70px';
+      const targetId = this.getAttribute('href');
+      document.querySelectorAll('.content div').forEach(div => {
+          div.style.display = 'none';
+      });
+      document.querySelector(targetId).style.display = 'block';
+  });
+});
+// 设置默认选中的tab为Bias
+document.querySelector('.tab a[href="#Bias"]').click();
+
+// document.querySelector('.tab a').click();
