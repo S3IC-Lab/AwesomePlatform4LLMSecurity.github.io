@@ -303,7 +303,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(194, 124, 20, 0.9);
+  --background-color: rgba(212, 163, 90, 0.9)
 }
 
 /*--------------------------------------------------------------
@@ -2279,129 +2279,66 @@ data-table {
   margin-top: 10px;
   padding: 10px;
   font-size: 20px;
-  border-radius: 10px;
+}
+.container_2 .content div {
+  border-radius: 20px;
+  display: none;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.container_2 .content div {
-  display: none;
+  width: 100%;
+  height: 100%;
+  /* 文字居中 后续删 */
+  text-align: center;
+  /* 文字行高 */
+  line-height: 520px;
 }
 .container_2 .content div:target {
   display: block;
 }
 
 .container_2 .select_container {
-  width: 100%;
+  width: 99%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
   padding: 20px;
-  background-color: #f9f9f9; /* 背景色 */
-  border-radius: 10px; /* 圆角 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影 */
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container_2 .select_container div {
-  margin: 0 15px; /* 增加每个 select 之间的间距 */
+  margin: 0 20px;
 }
 
 .container_2 .select_container span {
   display: block;
-  margin-bottom: 8px; /* 增加标签与 select 之间的距离 */
+  margin-bottom: 8px;
   font-size: 18px;
-  color: #333; /* 标签文字颜色 */
+  color: #333;
   font-weight: bold;
 }
 
 .container_2 .select_container select {
-  padding: 8px 12px; /* 增加内边距 */
+  padding: 8px 12px;
   font-size: 14px;
-  color: #555; /* 文字颜色 */
-  background-color: #fff; /* 背景色 */
-  border: 1px solid #ccc; /* 边框 */
-  border-radius: 5px; /* 圆角 */
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   cursor: pointer;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* 过渡效果 */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .container_2 .select_container select:hover {
-  border-color: #007bff; /* 鼠标悬停时边框颜色 */
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* 鼠标悬停时阴影 */
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
 }
 
 .container_2 .select_container select:focus {
-  outline: none; /* 移除默认的焦点轮廓 */
-  border-color: #007bff; /* 焦点时边框颜色 */
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4); /* 焦点时阴影 */
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
 }
-/* .chart {
-  position: relative;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-} */
-
-/* .chart::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: conic-gradient(var(--segments));
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.chart::after {
-  content: attr(data-total);
-  position: absolute;
-  width: 65%;
-  height: 65%;
-  background: white;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.pointer {
-  position: absolute;
-  width: 2px;
-  height: 20%;
-  background: #333;
-  left: 50%;
-  top: 10%;
-  transform-origin: 50% 225%;
-  display: none;
-}
-
-.tooltip {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.9);
-  color: white;
-  padding: 12px 18px;
-  border-radius: 8px;
-  display: none;
-  pointer-events: none;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  max-width: 280px;
-  z-index: 1000;
-  backdrop-filter: blur(4px);
-  line-height: 1.5;
-}
-
-.tooltip strong {
-  color: #7ed321;
-  display: block;
-  margin-bottom: 6px;
-} */

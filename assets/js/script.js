@@ -175,6 +175,7 @@ var select_data = [
 
 var category=['Bias','Hallucination','Judge','Watermark','Privacy','Jailbreak'];
 var color=['#4cd5fc','#39e07d','#b17dd1','#ffd09c','#ffffa5','#fe3fff'];
+var light_color=['#e2f8ff','#d3f8e2','#f0e6f6','#fff4e8','#ffffe2','#ffe2ff'];
 
 var arr_method = select_data[0][0];
 var arr_model = select_data[0][1];
@@ -475,7 +476,15 @@ function createTabs() {
           document.querySelectorAll('.content div').forEach(div => {
               div.style.display = 'none';
           });
-          document.querySelector(targetId).style.display = 'block';
+          let div = document.querySelector(targetId);
+          div.style.display = 'block';
+          div.childNodes.forEach(child => {
+            if (child.nodeType === 1) {
+              child.style.display = 'block';
+            }
+          });
+          div.style.backgroundColor = light_color[category.indexOf(targetId.substring(1))];
+          // document.querySelector(".container_2 .select_container").style.backgroundColor = light_color[category.indexOf(targetId.substring(1))];
           getFirstData(targetId.substring(1));
       });
     });
