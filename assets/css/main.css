@@ -1053,7 +1053,7 @@ section,
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0, 0.25); /* 灰色半透明覆盖层 */
-  backdrop-filter: blur(2px); /* 灰色覆盖层上的高斯模糊效果 */
+  backdrop-filter: blur(0px); /* 灰色覆盖层上的高斯模糊效果 */
   z-index: 0;
 }
 
