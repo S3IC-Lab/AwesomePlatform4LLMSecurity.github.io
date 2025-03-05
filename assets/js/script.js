@@ -632,7 +632,7 @@ function getFirstData(type = 'Fairness') {
       document.getElementById('code').innerHTML = results.code
       document.getElementById('run').addEventListener("click",function(){
         // window.location.href = "https://www.baidu.com"
-        window.location.href = "http://121.248.54.196:5000/?code=" + code_detail;
+        window.location.href = "http://121.248.54.196:5000/?code=" + results.code;
       })
   };
 
