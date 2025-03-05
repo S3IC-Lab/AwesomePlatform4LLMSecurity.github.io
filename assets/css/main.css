@@ -2268,6 +2268,7 @@ data-table {
   text-align: left;
   padding-bottom: 10px;
   border-bottom: 2px solid #4cd5fc;
+  padding-left: 40px;
 }
 
 #details-content {

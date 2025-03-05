@@ -9,7 +9,7 @@ var overview = [{
   name: 'Fidelity',
   value: 30
 },{
-  name: 'Detectionability',
+  name: 'Detectability',
   value: 30
 },{
   name: 'Privacy',
@@ -30,7 +30,7 @@ var finished = [{
   name: 'Fidelity',
   value: 5
 },{
-  name: 'Detectionability',
+  name: 'Detectability',
   value: 10
 },{
   name: 'Privacy',
@@ -111,7 +111,7 @@ var select_data = [
     {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
     {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
-  // Detectionability
+  // Detectability
   [[
     { id: 1, name: 'Method 1' },
     { id: 2, name: 'Method 2' },
@@ -187,14 +187,14 @@ var dataset_all = 24;
 var models = ["Model 1", "Model 2", "Model 3", "Model 4"];
 var datasets = ["Dataset 1", "Dataset 2", "Dataset 3", "Dataset 4"];
 // var category=['Bias','Hallucination','Judge','Watermark','Privacy','Jailbreak'];
-var category=['Fairness','Truthfulness','Fidelity','Detectionability','Privacy','Safety']
+var category=['Fairness','Truthfulness','Fidelity','Detectability','Privacy','Safety']
 var color=['#d7e6fd','#faf566','#f3d7b8','#e9e2ee','#c0edd7','#fbcae6'];
 var light_color=['#f0f5ff','#fff9db','#f9e8d8','#f5f2f7','#e0f7ef','#fce7f3'];
 var details_texts = [
   'Fairness is the property of being fair, or free from bias or injustice. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
   'Truthfulness is the property of being truthful, or free from deceit or falsehood. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
   'Fidelity is the property of being faithful, or free from distortion or alteration. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
-  'Detectionability is the property of being able to detect, or identify the presence of something. It is a key concept in machine learning and AI, and is often used to evaluate the performance of algorithms.',
+  'Detectability is the property of being able to detect, or identify the presence of something. It is a key concept in machine learning and AI, and is often used to evaluate the performance of algorithms.',
   'Privacy is the property of being private, or free from intrusion or observation. It is a key concept in machine learning and AI, and is often used to evaluate the performance of algorithms.',
   'Safety is the property of being safe, or free from harm or danger. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.'
 ];
@@ -338,6 +338,7 @@ function createOverviewChart(overview, finished) {
   var finished_methods = document.getElementById('finished_methods');
   var details_text = document.getElementById('details-text');
   var details = document.getElementById('details');
+  var detail_img = document.getElementById('detail_img');
   
   var myChart = echarts.init(chartDom);
   myChart.setOption(option);
@@ -374,6 +375,7 @@ function createOverviewChart(overview, finished) {
       details_text.innerHTML = details_texts[currentIndex];
       details.style.backgroundColor = light_color[currentIndex];
       details.style.border = '2px solid ' + color[currentIndex];
+      detail_img.src = 'assets/img/' + category[currentIndex] + '.png';
     }, 2000);
   }
 

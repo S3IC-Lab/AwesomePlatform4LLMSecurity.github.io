@@ -22,7 +22,7 @@ Thanks for https://github.com/TrustGen/TrustGen.github.io.
     name: 'Fidelity',
     value: 30
   },{
-    name: 'Detectionability',
+    name: 'Detectability',
     value: 30
   },{
     name: 'Privacy',
@@ -46,7 +46,7 @@ Thanks for https://github.com/TrustGen/TrustGen.github.io.
     name: 'Fidelity',
     value: 5
   },{
-    name: 'Detectionability',
+    name: 'Detectability',
     value: 10
   },{
     name: 'Privacy',
@@ -78,7 +78,7 @@ Thanks for https://github.com/TrustGen/TrustGen.github.io.
   	...
     // Fidelity
   	...
-    // Detectionability
+    // Detectability
     [[
       { id: 1, name: 'Method 1' },
       { id: 2, name: 'Method 2' },
