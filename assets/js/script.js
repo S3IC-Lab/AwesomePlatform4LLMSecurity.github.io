@@ -60,12 +60,12 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py'},
-    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py'},
-    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py'},
-    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py'},
-    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py'},
-    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
   // Truthfulness
   [[
@@ -82,12 +82,12 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py'},
-    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py'},
-    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py'},
-    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py'},
-    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py'},
-    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
   // Fidelity
   [[
@@ -104,12 +104,12 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py'},
-    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py'},
-    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py'},
-    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py'},
-    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py'},
-    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
   // Detectionability
   [[
@@ -126,12 +126,12 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py'},
-    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py'},
-    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py'},
-    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py'},
-    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py'},
-    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: ["test.png"]},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: ["test.png"]},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: ["test.png"]},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: ["test.png"]},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: ["test.png"]},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: ["test.png"]},
   ]],
   // Privacy
   [[
@@ -148,12 +148,12 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py'},
-    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py'},
-    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py'},
-    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py'},
-    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py'},
-    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
   // Safety
   [[
@@ -170,14 +170,18 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py'},
-    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py'},
-    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py'},
-    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py'},
-    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py'},
-    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
 ];
+
+// The number of the all models and datasets.
+var model_all = 20;
+var dataset_all = 24;
 
 // The list of the models and datasets.
 var models = ["Model 1", "Model 2", "Model 3", "Model 4"];
@@ -198,6 +202,7 @@ var details_texts = [
 var arr_method = select_data[0][0];
 var arr_model = select_data[0][1];
 var arr_dataset = select_data[0][2];
+var nowModule = 'Fairness';
 
 function createOverviewChart(overview, finished) {
   var data = [];
@@ -617,10 +622,14 @@ function getFirstData(type = 'Fairness') {
 
   select_dataset.onchange = function () {
       var datasetId = select_dataset.value;
-      code_detail = arr_dataset.find(function (item) {
+      results = arr_dataset.find(function (item) {
         return item.id == datasetId;
-      }).code;
-      document.getElementById('code').innerHTML = code_detail 
+      });
+      if (results.res instanceof Array)
+        document.getElementById(nowModule).innerHTML = results.res.map(item => `<img src="assets/img/res/${item}" style="width: 30%; height: auto; margin: 10px;">`).join('');
+      else
+        document.getElementById(nowModule).innerHTML = results.res.replace(/\n/g, '<br>');
+      document.getElementById('code').innerHTML = results.code
       document.getElementById('run').addEventListener("click",function(){
         // window.location.href = "https://www.baidu.com"
         window.location.href = "http://121.248.54.196:5000/?code=" + code_detail;
@@ -650,6 +659,7 @@ function createTabs() {
           });
           let div = document.querySelector(targetId);
           div.style.display = 'block';
+          nowModule = targetId.substring(1);
           div.childNodes.forEach(child => {
             if (child.nodeType === 1) {
               child.style.display = 'block';
@@ -672,8 +682,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
               if (entry.target.classList.contains('container_1')) {
                 createOverviewChart(overview, finished);
-                createChart(20, 5, "model", '#687ad1');
-                createChart(50, 10, "dataset", '#fee451');
+                model_fin = models.length;
+                dataset_fin = datasets.length;
+                createChart(model_all, model_fin, "model", '#687ad1');
+                createChart(dataset_all, dataset_fin, "dataset", '#fee451');
               }
 
               else if (entry.target.classList.contains('container_2')) {
