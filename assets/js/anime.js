@@ -109,10 +109,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoContainer = document.getElementById("logo-img");
 
     // 当视频播放结束时，依次显示背景容器和文字
-    video.addEventListener("ended", function () {
+    // video.addEventListener("ended", function () {
         backgroundContainer.style.display = "block"; // 显示背景容器
         // 调用 triggerShrinkAnimation 函数，缩小视频
-        triggerShrinkAnimation(video);
+        // triggerShrinkAnimation(video);
         setTimeout(() => {
             backgroundContainer.style.opacity = 1; // 背景容器淡入
         }, 0);
@@ -129,6 +129,6 @@ document.addEventListener("DOMContentLoaded", function () {
             // 开始打字动画
             startTypingAnimation();
         }, 1000); // 延迟文字显示，确保背景淡入完成
-    });
+    // });
 });
 

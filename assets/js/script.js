@@ -703,3 +703,8 @@ document.addEventListener("DOMContentLoaded", function() {
       observer.observe(section);
   });
 });
+
+// 测试 后面删
+document.getElementById('run').addEventListener("click",function(){
+  window.location.href = "http://121.248.54.196:5000/?code=python test.py";
+})
