@@ -156,7 +156,7 @@
           – SZ.L
         </p>
         <br>
-        <img src="assets/img/milestone.png" class="img-fluid my-2" alt="">
+        <img src="assets/img/llm-history.jpg" class="img-fluid my-2" alt="">
         <div class="row gy-10 my-4">
         <div class="content col-xl-12 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
 <!--    <h3 class=" align-self-center align-self-xl-middle">TL; DR</h3>-->
@@ -164,18 +164,35 @@
           </p>
         </div>
         <div class="container_1 lazy-section">
-          <div id="overview" style="height: 250px;width: 400px;"></div>
-          <div id="model" style="height: 250px;width: 400px;"></div>
-          <div id="dataset" style="height: 250px;width: 400px;"></div>
+          <div class="line">
+            <div id="overview" style="height: 260px;width: 300px;margin-top: 20px;"></div>
+            <div id="details">
+              <div id="details-title">Fairness Module</div>
+              <div id="details-content">
+                <span>Current progress:</span>
+                <span id="finished_methods">5/20</span>
+              </div>
+              <p id="details-text">Fairness is a critical aspect of trustworthiness, ensuring that the model's behavior is consistent across different groups of users. To evaluate fairness, we consider the model's performance across different demographic groups
+                </p>
+            </div>
+          </div>
+          <div class="line">
+            <div>
+              <div id="model" style="height: 250px;width: 400px;"></div>
+            </div>
+            <div>
+              <div id="dataset" style="height: 250px;width: 400px;"></div>
+            </div>
+          </div>
         </div>
         <div class="container_2 lazy-section">
           <div class="tab">
-              <a href="#Bias" class="active">Bias</a>
-              <a href="#Hallucination">Hallucination</a>
-              <a href="#Judge">Judge</a >
-              <a href="#Watermark">Watermark</a>
+              <a href="#Fairness" class="active">Fairness</a>
+              <a href="#Truthfulness">Truthfulness</a>
+              <a href="#Fidelity">Fidelity</a >
+              <a href="#Detectionability">Detectionability</a>
               <a href="#Privacy">Privacy</a>
-              <a href="#Jailbreak">Jailbreak</a>
+              <a href="#Safety">Safety</a>
           </div>
           <div class="select_container">
             <div>
@@ -205,23 +222,23 @@
             <button class="run-button" id="run">Run</button>
           </div>
           <div class="content">
-            <div id="Bias">
-              Bias Results
+            <div id="Fairness">
+              Fairness Results
             </div>
-            <div id="Hallucination">
-              Hallucination Results
+            <div id="Truthfulness">
+              Truthfulness Results
             </div>
-            <div id="Judge">
-              Judge Results
+            <div id="Fidelity">
+              Fidelity Results
              </div> 
-            <div id="Watermark">
-              Watermark Results
+            <div id="Detectionability">
+              Detectionability Results
              </div> 
             <div id="Privacy">
               Privacy Results
              </div> 
-            <div id="Jailbreak">
-             Jailbreak Results
+            <div id="Safety">
+             Safety Results
              </div> 
           </div>
         </div>
@@ -318,7 +335,7 @@
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#trustModelRules">
                         <div class="accordion-body">
-                          The generative model should be designed and trained to ensure fairness, uphold universal values, and minimize biases in all user interactions. It must align with fundamental moral principles, be respectful of user differences, and avoid generating harmful, offensive, or inappropriate content in any context.
+                          The generative model should be designed and trained to ensure fairness, uphold universal values, and minimize Fairnesses in all user interactions. It must align with fundamental moral principles, be respectful of user differences, and avoid generating harmful, offensive, or inappropriate content in any context.
                         </div>
                       </div>
                     </div>
