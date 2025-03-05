@@ -1,45 +1,51 @@
+// The number of the all methods.
 var overview = [{
-  name: 'Bias',
+  name: 'Fairness',
   value: 20
 },{
-  name: 'Hallucination',
+  name: 'Truthfulness',
   value: 20
 },{
-  name: 'Judge',
+  name: 'Fidelity',
   value: 30
 },{
-  name: 'Watermark',
+  name: 'Detectionability',
   value: 30
 },{
   name: 'Privacy',
   value: 30
 },{
-  name: 'Jailbreak',
+  name: 'Safety',
   value: 40
 }];
 
+// The number of the finished methods.
 var finished = [{
-  name: 'Bias',
+  name: 'Fairness',
   value: 5
 },{
-  name: 'Hallucination',
+  name: 'Truthfulness',
   value: 5
 },{
-  name: 'Judge',
+  name: 'Fidelity',
   value: 5
 },{
-  name: 'Watermark',
+  name: 'Detectionability',
   value: 10
 },{
   name: 'Privacy',
   value: 5
 },{
-  name: 'Jailbreak',
+  name: 'Safety',
   value: 15
 }];
 
+// The data of the methods, models and datasets.
+// The first dimension is the category of the methods.
+// The second dimension is the data of the models and datasets. method_id is the id of the method.
+// The third dimension is the data of the datasets. model_id is the id of the model. code is the cmd code with the method using the model and dataset.
 var select_data = [
-  // Bias
+  // Fairness
   [[
     { id: 1, name: 'Method 1' },
     { id: 2, name: 'Method 2' },
@@ -54,14 +60,14 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1},
-    {id: 2, name: 'Dataset 2', model_id: 1},
-    {id: 3, name: 'Dataset 3', model_id: 2},
-    {id: 4, name: 'Dataset 4', model_id: 2},
-    {id: 5, name: 'Dataset 1', model_id: 3},
-    {id: 6, name: 'Dataset 2', model_id: 3},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
-  // Hallucination
+  // Truthfulness
   [[
     { id: 1, name: 'Method 1' },
     { id: 2, name: 'Method 2' },
@@ -76,14 +82,14 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1},
-    {id: 2, name: 'Dataset 2', model_id: 1},
-    {id: 3, name: 'Dataset 3', model_id: 2},
-    {id: 4, name: 'Dataset 4', model_id: 2},
-    {id: 5, name: 'Dataset 1', model_id: 3},
-    {id: 6, name: 'Dataset 2', model_id: 3},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
-  // Judge
+  // Fidelity
   [[
     { id: 1, name: 'Method 1' },
     { id: 2, name: 'Method 2' },
@@ -98,14 +104,14 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1},
-    {id: 2, name: 'Dataset 2', model_id: 1},
-    {id: 3, name: 'Dataset 3', model_id: 2},
-    {id: 4, name: 'Dataset 4', model_id: 2},
-    {id: 5, name: 'Dataset 1', model_id: 3},
-    {id: 6, name: 'Dataset 2', model_id: 3},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
-  // Watermark
+  // Detectionability
   [[
     { id: 1, name: 'Method 1' },
     { id: 2, name: 'Method 2' },
@@ -120,12 +126,12 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1},
-    {id: 2, name: 'Dataset 2', model_id: 1},
-    {id: 3, name: 'Dataset 3', model_id: 2},
-    {id: 4, name: 'Dataset 4', model_id: 2},
-    {id: 5, name: 'Dataset 1', model_id: 3},
-    {id: 6, name: 'Dataset 2', model_id: 3},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: ["test.png"]},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: ["test.png"]},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: ["test.png"]},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: ["test.png"]},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: ["test.png"]},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: ["test.png"]},
   ]],
   // Privacy
   [[
@@ -142,14 +148,14 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1},
-    {id: 2, name: 'Dataset 2', model_id: 1},
-    {id: 3, name: 'Dataset 3', model_id: 2},
-    {id: 4, name: 'Dataset 4', model_id: 2},
-    {id: 5, name: 'Dataset 1', model_id: 3},
-    {id: 6, name: 'Dataset 2', model_id: 3},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
-  // Jailbreak
+  // Safety
   [[
     { id: 1, name: 'Method 1' },
     { id: 2, name: 'Method 2' },
@@ -164,26 +170,42 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1},
-    {id: 2, name: 'Dataset 2', model_id: 1},
-    {id: 3, name: 'Dataset 3', model_id: 2},
-    {id: 4, name: 'Dataset 4', model_id: 2},
-    {id: 5, name: 'Dataset 1', model_id: 3},
-    {id: 6, name: 'Dataset 2', model_id: 3},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
 ];
 
-var category=['Bias','Hallucination','Judge','Watermark','Privacy','Jailbreak'];
+// The number of the all models and datasets.
+var model_all = 20;
+var dataset_all = 24;
+
+// The list of the models and datasets.
+var models = ["Model 1", "Model 2", "Model 3", "Model 4"];
+var datasets = ["Dataset 1", "Dataset 2", "Dataset 3", "Dataset 4"];
+// var category=['Bias','Hallucination','Judge','Watermark','Privacy','Jailbreak'];
+var category=['Fairness','Truthfulness','Fidelity','Detectionability','Privacy','Safety']
 var color=['#4cd5fc','#39e07d','#b17dd1','#ffd09c','#ffffa5','#fe3fff'];
 var light_color=['#e2f8ff','#d3f8e2','#f0e6f6','#fff4e8','#ffffe2','#ffe2ff'];
+var details_texts = [
+  'Fairness is the property of being fair, or free from bias or injustice. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
+  'Truthfulness is the property of being truthful, or free from deceit or falsehood. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
+  'Fidelity is the property of being faithful, or free from distortion or alteration. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
+  'Detectionability is the property of being able to detect, or identify the presence of something. It is a key concept in machine learning and AI, and is often used to evaluate the performance of algorithms.',
+  'Privacy is the property of being private, or free from intrusion or observation. It is a key concept in machine learning and AI, and is often used to evaluate the performance of algorithms.',
+  'Safety is the property of being safe, or free from harm or danger. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.'
+];
 
 var arr_method = select_data[0][0];
 var arr_model = select_data[0][1];
 var arr_dataset = select_data[0][2];
+var nowModule = 'Fairness';
 
 function createOverviewChart(overview, finished) {
   var data = [];
-  var color=['#4cd5fc','#39e07d','#b17dd1','#ffd09c','#ffffa5','#fe3fff']
   for (var i = 0; i < overview.length; i++) {
     data.push({
         value: overview[i].value,
@@ -307,9 +329,116 @@ function createOverviewChart(overview, finished) {
   }
   
   var chartDom = document.getElementById('overview');
+  var detail_title = document.getElementById('details-title');
+  var finished_methods = document.getElementById('finished_methods');
+  var details_text = document.getElementById('details-text');
+  var details = document.getElementById('details');
   
   var myChart = echarts.init(chartDom);
   myChart.setOption(option);
+
+  var currentIndex = 0;
+  var intervalId;
+  var isPaused = false;
+
+  function startAutoHighlight() {
+    intervalId = setInterval(function () {
+      if (isPaused) return;
+
+      var dataLen = data.length / 2;
+      myChart.dispatchAction({
+        type: 'downplay',
+        seriesIndex: 0,
+        dataIndex: currentIndex * 2
+      });
+      currentIndex = (currentIndex + 1) % dataLen;
+      myChart.dispatchAction({
+        type: 'highlight',
+        seriesIndex: 0,
+        dataIndex: currentIndex * 2
+      });
+      myChart.dispatchAction({
+        type: 'showTip',
+        seriesIndex: 0,
+        dataIndex: currentIndex * 2
+      });
+      detail_title.innerHTML = overview[currentIndex].name + " Module";
+      detail_title.style.borderColor = color[currentIndex];
+      finished_methods.innerHTML = finished[currentIndex].value + "/" + overview[currentIndex].value;
+      finished_methods.style.background = 'linear-gradient(to right, ' + tinycolor(color[currentIndex]).darken(20).toString() + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%, ' + color[currentIndex] + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%)';
+      details_text.innerHTML = details_texts[currentIndex];
+      details.style.backgroundColor = light_color[currentIndex];
+      details.style.border = '2px solid ' + color[currentIndex];
+    }, 2000);
+  }
+
+  // 初始化
+  currentIndex = 0;
+  myChart.dispatchAction({
+    type: 'downplay',
+    seriesIndex: 0,
+    dataIndex: currentIndex * 2
+  });
+  myChart.dispatchAction({
+    type: 'highlight',
+    seriesIndex: 0,
+    dataIndex: currentIndex * 2
+  });
+  myChart.dispatchAction({
+    type: 'showTip',
+    seriesIndex: 0,
+    dataIndex: currentIndex * 2
+  });
+  detail_title.innerHTML = overview[currentIndex].name + " Module";
+  detail_title.style.borderColor = color[currentIndex];
+  finished_methods.innerHTML = finished[currentIndex].value + "/" + overview[currentIndex].value;
+  finished_methods.style.background = 'linear-gradient(to right, ' + tinycolor(color[currentIndex]).darken(20).toString() + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%, ' + color[currentIndex] + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%)';
+  details_text.innerHTML = details_texts[currentIndex];
+  details.style.backgroundColor = light_color[currentIndex];
+  details.style.border = '2px solid ' + color[currentIndex];
+
+  startAutoHighlight();
+
+  myChart.on('mouseover', function (params) {
+    if (params.dataIndex % 2 === 0) {
+      isPaused = true;
+      clearInterval(intervalId);
+
+      myChart.dispatchAction({
+        type: 'downplay',
+        seriesIndex: 0,
+        dataIndex: currentIndex * 2
+      });
+
+      myChart.dispatchAction({
+        type: 'highlight',
+        seriesIndex: 0,
+        dataIndex: params.dataIndex
+      });
+      myChart.dispatchAction({
+        type: 'showTip',
+        seriesIndex: 0,
+        dataIndex: params.dataIndex
+      });
+
+      currentIndex = params.dataIndex / 2;
+    }
+  });
+
+  myChart.on('mouseout', function (params) {
+    if (params.dataIndex % 2 === 0) {
+      setTimeout(function(){
+        myChart.dispatchAction({
+          type: 'downplay',
+          seriesIndex: 0,
+          dataIndex: params.dataIndex
+        });
+      },2000)
+
+      isPaused = false;
+      startAutoHighlight();
+    }
+  });
 }
 
 function createChart(all, finished, div, color) {
@@ -390,7 +519,43 @@ function createChart(all, finished, div, color) {
         position: [100, 100]
     }]
     },
-    series: seriesOption
+    tooltip: {
+      show: true,
+      trigger: 'item',
+      borderWidth: 0,
+      backgroundColor: 'transparent',
+      formatter: function (params) {
+        if (params.name === 'Finished') {
+          var li = "<h5 style='color: #212529; font-size: 14px;'>Finished" + (div === 'model' ? ' Models' : ' Datasets') + "</h5><ul>";
+          if (div === 'model') {
+            for (var i = 0; i < models.length; i++) {
+              li += '<li>' + models[i] + '</li>';
+            }
+          } else {
+            for (var i = 0; i < datasets.length; i++) {
+              li += '<li>' + datasets[i] + '</li>';
+            }
+          }
+          return `
+              <div style="
+                  color: #212529;
+                  border: 2px solid ${color[0]};
+                  padding: 10px;
+                  border-radius: 5px;
+                  background-color: #fff;
+                  max-height: 200px;
+                  overflow: auto;
+              ">
+                  ${li}</ul>
+              </div>
+          `;
+        }
+      }
+    },
+    toolbox: {
+        show: false
+    },
+    series: seriesOption,
   }
   
   var chartDom = document.getElementById(div);
@@ -433,7 +598,7 @@ function addDataDataset(modelId) {
   select_dataset.innerHTML = html;
 }
 
-function getFirstData(type = 'Bias') {
+function getFirstData(type = 'Fairness') {
   arr_method = select_data[category.indexOf(type)][0];
   arr_model = select_data[category.indexOf(type)][1];
   arr_dataset = select_data[category.indexOf(type)][2];
@@ -453,6 +618,22 @@ function getFirstData(type = 'Bias') {
   select_model.onchange = function () {
       var modelId = select_model.value;
       addDataDataset(modelId);
+  };
+
+  select_dataset.onchange = function () {
+      var datasetId = select_dataset.value;
+      results = arr_dataset.find(function (item) {
+        return item.id == datasetId;
+      });
+      if (results.res instanceof Array)
+        document.getElementById(nowModule).innerHTML = results.res.map(item => `<img src="assets/img/res/${item}" style="width: 30%; height: auto; margin: 10px;">`).join('');
+      else
+        document.getElementById(nowModule).innerHTML = results.res.replace(/\n/g, '<br>');
+      document.getElementById('code').innerHTML = results.code
+      document.getElementById('run').addEventListener("click",function(){
+        // window.location.href = "https://www.baidu.com"
+        window.location.href = "http://121.248.54.196:5000/?code=" + code_detail;
+      })
   };
 
   addDataMethod();
@@ -478,6 +659,7 @@ function createTabs() {
           });
           let div = document.querySelector(targetId);
           div.style.display = 'block';
+          nowModule = targetId.substring(1);
           div.childNodes.forEach(child => {
             if (child.nodeType === 1) {
               child.style.display = 'block';
@@ -488,7 +670,7 @@ function createTabs() {
           getFirstData(targetId.substring(1));
       });
     });
-    document.querySelector('.tab a[href="#Bias"]').click();
+    document.querySelector('.tab a[href="#Fairness"]').click();
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -500,8 +682,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
               if (entry.target.classList.contains('container_1')) {
                 createOverviewChart(overview, finished);
-                createChart(20, 5, "model", '#687ad1');
-                createChart(50, 10, "dataset", '#fee451');
+                model_fin = models.length;
+                dataset_fin = datasets.length;
+                createChart(model_all, model_fin, "model", '#687ad1');
+                createChart(dataset_all, dataset_fin, "dataset", '#fee451');
               }
 
               else if (entry.target.classList.contains('container_2')) {
