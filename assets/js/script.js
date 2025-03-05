@@ -178,6 +178,10 @@ var select_data = [
     {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
   ]],
 ];
+
+// The list of the models and datasets.
+var models = ["Model 1", "Model 2", "Model 3", "Model 4"];
+var datasets = ["Dataset 1", "Dataset 2", "Dataset 3", "Dataset 4"];
 // var category=['Bias','Hallucination','Judge','Watermark','Privacy','Jailbreak'];
 var category=['Fairness','Truthfulness','Fidelity','Detectionability','Privacy','Safety']
 var color=['#4cd5fc','#39e07d','#b17dd1','#ffd09c','#ffffa5','#fe3fff'];
@@ -186,8 +190,8 @@ var details_texts = [
   'Fairness is the property of being fair, or free from bias or injustice. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
   'Truthfulness is the property of being truthful, or free from deceit or falsehood. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
   'Fidelity is the property of being faithful, or free from distortion or alteration. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
-  'Detectionability is the property of being able to detect, or identify the presence of something. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
-  'Privacy is the property of being private, or free from intrusion or observation. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
+  'Detectionability is the property of being able to detect, or identify the presence of something. It is a key concept in machine learning and AI, and is often used to evaluate the performance of algorithms.',
+  'Privacy is the property of being private, or free from intrusion or observation. It is a key concept in machine learning and AI, and is often used to evaluate the performance of algorithms.',
   'Safety is the property of being safe, or free from harm or danger. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.'
 ];
 
@@ -328,7 +332,7 @@ function createOverviewChart(overview, finished) {
   var myChart = echarts.init(chartDom);
   myChart.setOption(option);
 
-  var currentIndex = -1;
+  var currentIndex = 0;
   var intervalId;
   var isPaused = false;
 
@@ -340,7 +344,7 @@ function createOverviewChart(overview, finished) {
       myChart.dispatchAction({
         type: 'downplay',
         seriesIndex: 0,
-        dataIndex: currentIndex * 2 // 跳过空白项
+        dataIndex: currentIndex * 2
       });
       currentIndex = (currentIndex + 1) % dataLen;
       myChart.dispatchAction({
@@ -362,6 +366,31 @@ function createOverviewChart(overview, finished) {
       details.style.border = '2px solid ' + color[currentIndex];
     }, 2000);
   }
+
+  // 初始化
+  currentIndex = 0;
+  myChart.dispatchAction({
+    type: 'downplay',
+    seriesIndex: 0,
+    dataIndex: currentIndex * 2
+  });
+  myChart.dispatchAction({
+    type: 'highlight',
+    seriesIndex: 0,
+    dataIndex: currentIndex * 2
+  });
+  myChart.dispatchAction({
+    type: 'showTip',
+    seriesIndex: 0,
+    dataIndex: currentIndex * 2
+  });
+  detail_title.innerHTML = overview[currentIndex].name + " Module";
+  detail_title.style.borderColor = color[currentIndex];
+  finished_methods.innerHTML = finished[currentIndex].value + "/" + overview[currentIndex].value;
+  finished_methods.style.background = 'linear-gradient(to right, ' + tinycolor(color[currentIndex]).darken(20).toString() + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%, ' + color[currentIndex] + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%)';
+  details_text.innerHTML = details_texts[currentIndex];
+  details.style.backgroundColor = light_color[currentIndex];
+  details.style.border = '2px solid ' + color[currentIndex];
 
   startAutoHighlight();
 
@@ -485,7 +514,43 @@ function createChart(all, finished, div, color) {
         position: [100, 100]
     }]
     },
-    series: seriesOption
+    tooltip: {
+      show: true,
+      trigger: 'item',
+      borderWidth: 0,
+      backgroundColor: 'transparent',
+      formatter: function (params) {
+        if (params.name === 'Finished') {
+          var li = "<h5 style='color: #212529; font-size: 14px;'>Finished" + (div === 'model' ? ' Models' : ' Datasets') + "</h5><ul>";
+          if (div === 'model') {
+            for (var i = 0; i < models.length; i++) {
+              li += '<li>' + models[i] + '</li>';
+            }
+          } else {
+            for (var i = 0; i < datasets.length; i++) {
+              li += '<li>' + datasets[i] + '</li>';
+            }
+          }
+          return `
+              <div style="
+                  color: #212529;
+                  border: 2px solid ${color[0]};
+                  padding: 10px;
+                  border-radius: 5px;
+                  background-color: #fff;
+                  max-height: 200px;
+                  overflow: auto;
+              ">
+                  ${li}</ul>
+              </div>
+          `;
+        }
+      }
+    },
+    toolbox: {
+        show: false
+    },
+    series: seriesOption,
   }
   
   var chartDom = document.getElementById(div);
