@@ -1184,6 +1184,7 @@ section,
 }
 
 .clients .swiper-slide img {
+  
   transition: 0.3s;
 }
 
@@ -1191,6 +1192,17 @@ section,
   transform: scale(1.1);
 }
 
+/* 解除容器宽度限制 */
+.swiper1 {
+  max-width: 1000px !important; /* 设置大于默认容器的宽度 */
+}
+
+/* 或者直接修改swiper-slide尺寸 */
+.swiper-slide {
+  width: auto !important;  /* 禁用默认宽度 */
+  max-width: 400px;        /* 设置最大显示宽度 */
+  
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
