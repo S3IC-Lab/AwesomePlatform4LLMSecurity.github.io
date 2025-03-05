@@ -2342,3 +2342,42 @@ data-table {
   border-color: #007bff;
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
 }
+
+.container_2 .code-container {
+    display: flex;
+    align-items: center;
+    width: 99%;
+    margin-top: 20px;
+}
+
+.code-label {
+    margin-right: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.code-box {
+    flex-grow: 1;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    min-height: 45px;
+  }
+  
+  .run-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    min-height: 45px;
+    white-space: nowrap;
+}
+
+.run-button:hover {
+    background-color: #45a049;
+}

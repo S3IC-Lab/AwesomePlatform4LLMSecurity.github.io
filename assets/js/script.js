@@ -54,12 +54,12 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1},
-    {id: 2, name: 'Dataset 2', model_id: 1},
-    {id: 3, name: 'Dataset 3', model_id: 2},
-    {id: 4, name: 'Dataset 4', model_id: 2},
-    {id: 5, name: 'Dataset 1', model_id: 3},
-    {id: 6, name: 'Dataset 2', model_id: 3},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py'},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py'},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py'},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py'},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py'},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
   ]],
   // Hallucination
   [[
@@ -76,12 +76,12 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1},
-    {id: 2, name: 'Dataset 2', model_id: 1},
-    {id: 3, name: 'Dataset 3', model_id: 2},
-    {id: 4, name: 'Dataset 4', model_id: 2},
-    {id: 5, name: 'Dataset 1', model_id: 3},
-    {id: 6, name: 'Dataset 2', model_id: 3},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py'},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py'},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py'},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py'},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py'},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
   ]],
   // Judge
   [[
@@ -98,12 +98,12 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1},
-    {id: 2, name: 'Dataset 2', model_id: 1},
-    {id: 3, name: 'Dataset 3', model_id: 2},
-    {id: 4, name: 'Dataset 4', model_id: 2},
-    {id: 5, name: 'Dataset 1', model_id: 3},
-    {id: 6, name: 'Dataset 2', model_id: 3},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py'},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py'},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py'},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py'},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py'},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
   ]],
   // Watermark
   [[
@@ -120,12 +120,12 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1},
-    {id: 2, name: 'Dataset 2', model_id: 1},
-    {id: 3, name: 'Dataset 3', model_id: 2},
-    {id: 4, name: 'Dataset 4', model_id: 2},
-    {id: 5, name: 'Dataset 1', model_id: 3},
-    {id: 6, name: 'Dataset 2', model_id: 3},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py'},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py'},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py'},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py'},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py'},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
   ]],
   // Privacy
   [[
@@ -142,12 +142,12 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1},
-    {id: 2, name: 'Dataset 2', model_id: 1},
-    {id: 3, name: 'Dataset 3', model_id: 2},
-    {id: 4, name: 'Dataset 4', model_id: 2},
-    {id: 5, name: 'Dataset 1', model_id: 3},
-    {id: 6, name: 'Dataset 2', model_id: 3},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py'},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py'},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py'},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py'},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py'},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
   ]],
   // Jailbreak
   [[
@@ -164,12 +164,12 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1},
-    {id: 2, name: 'Dataset 2', model_id: 1},
-    {id: 3, name: 'Dataset 3', model_id: 2},
-    {id: 4, name: 'Dataset 4', model_id: 2},
-    {id: 5, name: 'Dataset 1', model_id: 3},
-    {id: 6, name: 'Dataset 2', model_id: 3},
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py'},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py'},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py'},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py'},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py'},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py'},
   ]],
 ];
 
@@ -453,6 +453,18 @@ function getFirstData(type = 'Bias') {
   select_model.onchange = function () {
       var modelId = select_model.value;
       addDataDataset(modelId);
+  };
+
+  select_dataset.onchange = function () {
+      var datasetId = select_dataset.value;
+      code_detail = arr_dataset.find(function (item) {
+        return item.id == datasetId;
+      }).code;
+      document.getElementById('code').innerHTML = code_detail 
+      document.getElementById('run').addEventListener("click",function(){
+        // window.location.href = "https://www.baidu.com"
+        window.location.href = "http://121.248.54.196:5000/?code=" + code_detail;
+      })
   };
 
   addDataMethod();
