@@ -188,8 +188,8 @@ var models = ["Model 1", "Model 2", "Model 3", "Model 4"];
 var datasets = ["Dataset 1", "Dataset 2", "Dataset 3", "Dataset 4"];
 // var category=['Bias','Hallucination','Judge','Watermark','Privacy','Jailbreak'];
 var category=['Fairness','Truthfulness','Fidelity','Detectionability','Privacy','Safety']
-var color=['#4cd5fc','#39e07d','#b17dd1','#ffd09c','#ffffa5','#fe3fff'];
-var light_color=['#e2f8ff','#d3f8e2','#f0e6f6','#fff4e8','#ffffe2','#ffe2ff'];
+var color=['#d7e6fd','#faf566','#f3d7b8','#e9e2ee','#c0edd7','#fbcae6'];
+var light_color=['#f0f5ff','#fff9db','#f9e8d8','#f5f2f7','#e0f7ef','#fce7f3'];
 var details_texts = [
   'Fairness is the property of being fair, or free from bias or injustice. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
   'Truthfulness is the property of being truthful, or free from deceit or falsehood. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
@@ -212,14 +212,19 @@ function createOverviewChart(overview, finished) {
         name: overview[i].name,
         itemStyle: {
             normal: {
-                borderWidth: 5,
+                borderWidth: 0,
                 shadowBlur: 10,
                 borderColor:color[i],
                 shadowColor: color[i]
+            },
+          },
+          emphasis: {
+            itemStyle:{
+               color: color[i]
             }
         }
     }, {
-        value: 2,
+        value: 1,
         name: '',
         itemStyle: {
             normal: {
@@ -240,14 +245,14 @@ function createOverviewChart(overview, finished) {
     name: '',
     type: 'pie',
     clockWise: true,
-    radius: [80, 109],
+    radius: [70, 109],
     hoverAnimation: true,
     emphasis: {
       label: {
         show: true,
         // fontSize: 20,
         fontWeight: 'bold',
-        position: 'center'
+        position: 'center',
       }
     },
     itemStyle: {
@@ -288,7 +293,7 @@ function createOverviewChart(overview, finished) {
     }]
     },
     tooltip: {
-        show: true,
+        show: false,
         trigger: 'item',
         borderWidth: 0,
         backgroundColor: 'transparent',
@@ -303,7 +308,7 @@ function createOverviewChart(overview, finished) {
             var name = params.name;
             var color = params.color;
   
-            var darkColor = tinycolor(color).darken(20).toString();
+            var darkColor = tinycolor(color).darken(10).toString();
   
             return `
                 <div style="
@@ -365,7 +370,7 @@ function createOverviewChart(overview, finished) {
       detail_title.innerHTML = overview[currentIndex].name + " Module";
       detail_title.style.borderColor = color[currentIndex];
       finished_methods.innerHTML = finished[currentIndex].value + "/" + overview[currentIndex].value;
-      finished_methods.style.background = 'linear-gradient(to right, ' + tinycolor(color[currentIndex]).darken(20).toString() + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%, ' + color[currentIndex] + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%)';
+      finished_methods.style.background = 'linear-gradient(to right, ' + tinycolor(color[currentIndex]).darken(10).toString() + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%, ' + color[currentIndex] + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%)';
       details_text.innerHTML = details_texts[currentIndex];
       details.style.backgroundColor = light_color[currentIndex];
       details.style.border = '2px solid ' + color[currentIndex];
@@ -392,7 +397,7 @@ function createOverviewChart(overview, finished) {
   detail_title.innerHTML = overview[currentIndex].name + " Module";
   detail_title.style.borderColor = color[currentIndex];
   finished_methods.innerHTML = finished[currentIndex].value + "/" + overview[currentIndex].value;
-  finished_methods.style.background = 'linear-gradient(to right, ' + tinycolor(color[currentIndex]).darken(20).toString() + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%, ' + color[currentIndex] + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%)';
+  finished_methods.style.background = 'linear-gradient(to right, ' + tinycolor(color[currentIndex]).darken(10).toString() + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%, ' + color[currentIndex] + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%)';
   details_text.innerHTML = details_texts[currentIndex];
   details.style.backgroundColor = light_color[currentIndex];
   details.style.border = '2px solid ' + color[currentIndex];
@@ -450,14 +455,14 @@ function createChart(all, finished, div, color) {
         name: i === 0 ? 'Finished' : 'Unfinished',
         itemStyle: {
             normal: {
-                borderWidth: 5,
+                borderWidth: 0,
                 shadowBlur: 5,
                 borderColor:color[i],
                 shadowColor: color[i]
             }
         }
     }, {
-        value: 0.2,
+        value: 0.05,
         name: '',
         itemStyle: {
             normal: {
@@ -648,7 +653,7 @@ function createTabs() {
           event.preventDefault();
           tabLinks.forEach(tab => {
             tab.style.height = '50px';
-            tab.style.backgroundColor = tinycolor(color[category.indexOf(tab.getAttribute('href').substring(1))]).lighten(10).toString();
+            tab.style.backgroundColor = color[category.indexOf(tab.getAttribute('href').substring(1))];
           });
           c = color[category.indexOf(this.getAttribute('href').substring(1))];
           this.style.backgroundColor = c;
