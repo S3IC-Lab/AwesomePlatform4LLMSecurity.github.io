@@ -52,11 +52,8 @@ var select_data = [
     { id: 3, name: 'Egocentric Bias' },
   ],[
     {id: 1, name: 'Deepseek-r1:70b', method_id: 1},
-    {id: 3, name: 'Model 3', method_id: 2},
-    {id: 4, name: 'Model 4', method_id: 2},
-    {id: 5, name: 'Model 1', method_id: 3},
-    {id: 6, name: 'Model 2', method_id: 3},
-    {id: 7, name: 'Model 1', method_id: 4},
+    {id: 2, name: 'Deepseek-r1:70b', method_id: 2},
+    {id: 3, name: 'Deepseek-r1:70b', method_id: 3},
   ],[
     {id: 1, 
       name: 'Bias50', 
@@ -77,7 +74,7 @@ var select_data = [
 
     {id: 2, 
       name: 'Bias50', 
-      model_id: 1, 
+      model_id: 2, 
       code: 'python examples/llm_bias.py --task compassion', 
       res: 
       `Examples: \n
@@ -94,7 +91,7 @@ var select_data = [
       
     {id: 3, 
       name: 'Bias50', 
-      model_id: 2, 
+      model_id: 3, 
       code: 'python examples/llm_bias.py --task selective', 
       res: 
       `Examples: \n
@@ -106,9 +103,6 @@ var select_data = [
       The result: \n1.xxx\n2.xxx\n3.xxx`
     },
 
-    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
-    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
-    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
   // Truthfulness
   [[
