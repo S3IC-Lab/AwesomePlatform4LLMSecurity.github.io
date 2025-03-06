@@ -161,188 +161,80 @@ var select_data = [
   ],[
     {id: 1, name: 'c4', model_id: 1, 
       code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--opt-1.3b/ --visualize_or_not True', 
-      res: [`Examples: \nThe watermarked text:\n
-        Cluster comprises IBM's Opteron-based eServer 325 server and systems management software and storage devices that can run Linux and Windows operating systems.\n\n
-        IBM's servers can run Linux, Solaris, Windows and OS X, among others, each one with a new operating system capability, Watson says. It can handle databases but it's specifically designed to do machine learning research.\n\n
-        It can deliver results ranging from queries and search results to more complex analytics that can take weeks or even months to build.\n\n
-        According to Watson, using its database capabilities, the machines can handle "high-performance computing applications" and have a larger memory pool plus more memory and processing power.\n\n
-        Data are not generated from scratch -- instead they're linked from other computers through "truckloads of data," Watson said. They form a network that the machine learns through.\n\n
-        The data form a massive and growing database. This becomes IBM's main database hub.\n\n
-        Its cluster enables the machine to do things like identify and predict trends, including natural language processing and social media, Watson said.\n\n\n 
-        The result: \n1."Fidelity-add_watermark-1.png"\n2."Fidelity-add_watermark-2.png"`]},
+      res: ["Detectability-add-1.png"]},
 
     {id: 2, name: 'WMT16_de_en', model_id: 1, 
       code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--opt-1.3b/ --visualize_or_not True', 
-      res: [`Examples: \nThe watermarked text:\n
-        Cluster comprises IBM's Opteron-based eServer 325 server and systems management software and storage devices that can run Linux and Windows operating systems.\n\n
-        IBM's servers can run Linux, Solaris, Windows and OS X, among others, each one with a new operating system capability, Watson says. It can handle databases but it's specifically designed to do machine learning research.\n\n
-        It can deliver results ranging from queries and search results to more complex analytics that can take weeks or even months to build.\n\n
-        According to Watson, using its database capabilities, the machines can handle "high-performance computing applications" and have a larger memory pool plus more memory and processing power.\n\n
-        Data are not generated from scratch -- instead they're linked from other computers through "truckloads of data," Watson said. They form a network that the machine learns through.\n\n
-        The data form a massive and growing database. This becomes IBM's main database hub.\n\n
-        Its cluster enables the machine to do things like identify and predict trends, including natural language processing and social media, Watson said.\n\n\n 
-        The result: \n1."Fidelity-add_watermark-1.png"\n2."Fidelity-add_watermark-2.png"`]},
+      res: ["Detectability-add-2.png"]},
 
     {id: 3, name: 'HumanEval', model_id: 1, 
       code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--opt-1.3b/ --visualize_or_not True', 
-      res: [`Examples: \nThe watermarked text:\n
-        Cluster comprises IBM's Opteron-based eServer 325 server and systems management software and storage devices that can run Linux and Windows operating systems.\n\n
-        IBM's servers can run Linux, Solaris, Windows and OS X, among others, each one with a new operating system capability, Watson says. It can handle databases but it's specifically designed to do machine learning research.\n\n
-        It can deliver results ranging from queries and search results to more complex analytics that can take weeks or even months to build.\n\n
-        According to Watson, using its database capabilities, the machines can handle "high-performance computing applications" and have a larger memory pool plus more memory and processing power.\n\n
-        Data are not generated from scratch -- instead they're linked from other computers through "truckloads of data," Watson said. They form a network that the machine learns through.\n\n
-        The data form a massive and growing database. This becomes IBM's main database hub.\n\n
-        Its cluster enables the machine to do things like identify and predict trends, including natural language processing and social media, Watson said.\n\n\n 
-        The result: \n1."Fidelity-add_watermark-1.png"\n2."Fidelity-add_watermark-2.png"`]},
+      res: ["Detectability-add-1.png"]},
 
     {id: 4, name: 'c4', model_id: 2, 
       code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--llama-2-7B/ --visualize_or_not True', 
-      res: [`Examples: \nThe watermarked text:\n
-        Cluster comprises IBM's Opteron-based eServer 325 server and systems management software and storage devices that can run Linux and Windows operating systems.\n\n
-        IBM's servers can run Linux, Solaris, Windows and OS X, among others, each one with a new operating system capability, Watson says. It can handle databases but it's specifically designed to do machine learning research.\n\n
-        It can deliver results ranging from queries and search results to more complex analytics that can take weeks or even months to build.\n\n
-        According to Watson, using its database capabilities, the machines can handle "high-performance computing applications" and have a larger memory pool plus more memory and processing power.\n\n
-        Data are not generated from scratch -- instead they're linked from other computers through "truckloads of data," Watson said. They form a network that the machine learns through.\n\n
-        The data form a massive and growing database. This becomes IBM's main database hub.\n\n
-        Its cluster enables the machine to do things like identify and predict trends, including natural language processing and social media, Watson said.\n\n\n 
-        The result: \n1."Fidelity-add_watermark-1.png"\n2."Fidelity-add_watermark-2.png"`]},
+      res: ["Detectability-add-2.png"]},
 
     {id: 5, name: 'WMT16_de_en', model_id: 2, 
       code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--llama-2-7B/ --visualize_or_not True', 
-      res: [`Examples: \nThe watermarked text:\n
-        Cluster comprises IBM's Opteron-based eServer 325 server and systems management software and storage devices that can run Linux and Windows operating systems.\n\n
-        IBM's servers can run Linux, Solaris, Windows and OS X, among others, each one with a new operating system capability, Watson says. It can handle databases but it's specifically designed to do machine learning research.\n\n
-        It can deliver results ranging from queries and search results to more complex analytics that can take weeks or even months to build.\n\n
-        According to Watson, using its database capabilities, the machines can handle "high-performance computing applications" and have a larger memory pool plus more memory and processing power.\n\n
-        Data are not generated from scratch -- instead they're linked from other computers through "truckloads of data," Watson said. They form a network that the machine learns through.\n\n
-        The data form a massive and growing database. This becomes IBM's main database hub.\n\n
-        Its cluster enables the machine to do things like identify and predict trends, including natural language processing and social media, Watson said.\n\n\n 
-        The result: \n1."Fidelity-add_watermark-1.png"\n2."Fidelity-add_watermark-2.png"`]},
+      res: ["Detectability-add-1.png"]},
 
     {id: 6, name: 'HumanEval', model_id: 2, 
       code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--llama-2-7B/ --visualize_or_not True', 
-      res: [`Examples: \nThe watermarked text:\n
-        Cluster comprises IBM's Opteron-based eServer 325 server and systems management software and storage devices that can run Linux and Windows operating systems.\n\n
-        IBM's servers can run Linux, Solaris, Windows and OS X, among others, each one with a new operating system capability, Watson says. It can handle databases but it's specifically designed to do machine learning research.\n\n
-        It can deliver results ranging from queries and search results to more complex analytics that can take weeks or even months to build.\n\n
-        According to Watson, using its database capabilities, the machines can handle "high-performance computing applications" and have a larger memory pool plus more memory and processing power.\n\n
-        Data are not generated from scratch -- instead they're linked from other computers through "truckloads of data," Watson said. They form a network that the machine learns through.\n\n
-        The data form a massive and growing database. This becomes IBM's main database hub.\n\n
-        Its cluster enables the machine to do things like identify and predict trends, including natural language processing and social media, Watson said.\n\n\n 
-        The result: \n1."Fidelity-add_watermark-1.png"\n2."Fidelity-add_watermark-2.png"`]},
+      res: ["Detectability-add-2.png"]},
 
     {id: 7, name: 'c4', model_id: 3, 
       code: "python watermark.py --task detect --algorithm KGW --attack 'word-s(Context)'", 
-      res: [`Examples: \nApplying attacks: ['word-s(Context)']\n
-        BertForMaskedLM has generative capabilities, as prepare_inputs_for_generation is explicitly overwritten. However, it doesn't directly inherit from GenerationMixin. \nFrom 👉v4.50👈 onwards, PreTrainedModel will NOT inherit from GenerationMixin, and this model will lose the ability to call generate and other related functions.\n\n
-          - If you're using trust_remote_code=True, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes\n
-          - If you are the owner of the model architecture code, please modify your model class such that it inherits from GenerationMixin (after PreTrainedModel, otherwise you'll get an exception).\n
-          - If you are not the owner of the model architecture class, please contact the model code owner to update it.\n
-            Some weights of the model checkpoint at /home/xu_zheng/model/google-bert/bert-large-uncased/ were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', \n'cls.seq_relationship.bias', 'cls.seq_relationship.weight']\n
-        - This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n
-        - This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n
-          [nltk_data] Downloading package wordnet to /home/xu_zheng/nltk_data...\n
-          [nltk_data]   Package wordnet is already up-to-date!\n
-          {'TPR': 0.99, 'F1': 0.9924812030075187, 'ACC': 0.9925}\n`]},
+      res: ["Detectability-add-1.png"]},
 
 
     {id: 8, name: 'WMT16_de_en', model_id: 3, 
       code: "python watermark.py --task detect --algorithm KGW --attack 'word-s(Context)'", 
-      res: [`Examples: \nApplying attacks: ['word-s(Context)']\n
-        BertForMaskedLM has generative capabilities, as prepare_inputs_for_generation is explicitly overwritten. However, it doesn't directly inherit from GenerationMixin. \nFrom 👉v4.50👈 onwards, PreTrainedModel will NOT inherit from GenerationMixin, and this model will lose the ability to call generate and other related functions.\n\n
-          - If you're using trust_remote_code=True, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes\n
-          - If you are the owner of the model architecture code, please modify your model class such that it inherits from GenerationMixin (after PreTrainedModel, otherwise you'll get an exception).\n
-          - If you are not the owner of the model architecture class, please contact the model code owner to update it.\n
-            Some weights of the model checkpoint at /home/xu_zheng/model/google-bert/bert-large-uncased/ were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', \n'cls.seq_relationship.bias', 'cls.seq_relationship.weight']\n
-        - This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n
-        - This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n
-          [nltk_data] Downloading package wordnet to /home/xu_zheng/nltk_data...\n
-          [nltk_data]   Package wordnet is already up-to-date!\n
-          {'TPR': 0.99, 'F1': 0.9924812030075187, 'ACC': 0.9925}\n`]},
+      res: ["Detectability-add-2.png"]},
 
     {id: 9, name: 'HumanEval', model_id: 3, 
       code: "python watermark.py --task detect --algorithm KGW --attack 'word-s(Context)'", 
-      res: [`Examples: \nApplying attacks: ['word-s(Context)']\n
-        BertForMaskedLM has generative capabilities, as prepare_inputs_for_generation is explicitly overwritten. However, it doesn't directly inherit from GenerationMixin. \nFrom 👉v4.50👈 onwards, PreTrainedModel will NOT inherit from GenerationMixin, and this model will lose the ability to call generate and other related functions.\n\n
-          - If you're using trust_remote_code=True, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes\n
-          - If you are the owner of the model architecture code, please modify your model class such that it inherits from GenerationMixin (after PreTrainedModel, otherwise you'll get an exception).\n
-          - If you are not the owner of the model architecture class, please contact the model code owner to update it.\n
-            Some weights of the model checkpoint at /home/xu_zheng/model/google-bert/bert-large-uncased/ were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', \n'cls.seq_relationship.bias', 'cls.seq_relationship.weight']\n
-        - This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n
-        - This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n
-          [nltk_data] Downloading package wordnet to /home/xu_zheng/nltk_data...\n
-          [nltk_data]   Package wordnet is already up-to-date!\n
-          {'TPR': 0.99, 'F1': 0.9924812030075187, 'ACC': 0.9925}\n`]},
+      res: ["Detectability-add-1.png"]},
 
 
       {id: 10, name: 'c4', model_id: 4, 
         code: "python watermark.py --task detect --algorithm KGW --attack 'word-s(Context)'", 
-        res: [`Examples: \nApplying attacks: ['word-s(Context)']\n
-          BertForMaskedLM has generative capabilities, as prepare_inputs_for_generation is explicitly overwritten. However, it doesn't directly inherit from GenerationMixin. \nFrom 👉v4.50👈 onwards, PreTrainedModel will NOT inherit from GenerationMixin, and this model will lose the ability to call generate and other related functions.\n\n
-            - If you're using trust_remote_code=True, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes\n
-            - If you are the owner of the model architecture code, please modify your model class such that it inherits from GenerationMixin (after PreTrainedModel, otherwise you'll get an exception).\n
-            - If you are not the owner of the model architecture class, please contact the model code owner to update it.\n
-              Some weights of the model checkpoint at /home/xu_zheng/model/google-bert/bert-large-uncased/ were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', \n'cls.seq_relationship.bias', 'cls.seq_relationship.weight']\n
-          - This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n
-          - This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n
-            [nltk_data] Downloading package wordnet to /home/xu_zheng/nltk_data...\n
-            [nltk_data]   Package wordnet is already up-to-date!\n
-            {'TPR': 0.99, 'F1': 0.9924812030075187, 'ACC': 0.9925}\n`]},
+        res: ["Detectability-add-2.png"]},
   
   
       {id: 11, name: 'WMT16_de_en', model_id: 4, 
         code: "python watermark.py --task detect --algorithm KGW --attack 'word-s(Context)'", 
-        res: [`Examples: \nApplying attacks: ['word-s(Context)']\n
-          BertForMaskedLM has generative capabilities, as prepare_inputs_for_generation is explicitly overwritten. However, it doesn't directly inherit from GenerationMixin. \nFrom 👉v4.50👈 onwards, PreTrainedModel will NOT inherit from GenerationMixin, and this model will lose the ability to call generate and other related functions.\n\n
-            - If you're using trust_remote_code=True, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes\n
-            - If you are the owner of the model architecture code, please modify your model class such that it inherits from GenerationMixin (after PreTrainedModel, otherwise you'll get an exception).\n
-            - If you are not the owner of the model architecture class, please contact the model code owner to update it.\n
-              Some weights of the model checkpoint at /home/xu_zheng/model/google-bert/bert-large-uncased/ were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', \n'cls.seq_relationship.bias', 'cls.seq_relationship.weight']\n
-          - This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n
-          - This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n
-            [nltk_data] Downloading package wordnet to /home/xu_zheng/nltk_data...\n
-            [nltk_data]   Package wordnet is already up-to-date!\n
-            {'TPR': 0.99, 'F1': 0.9924812030075187, 'ACC': 0.9925}\n`]},
+        res: ["Detectability-add-1.png"]},
   
       {id: 12, name: 'HumanEval', model_id: 4, 
         code: "python watermark.py --task detect --algorithm KGW --attack 'word-s(Context)'", 
-        res: [`Examples: \nApplying attacks: ['word-s(Context)']\n
-          BertForMaskedLM has generative capabilities, as prepare_inputs_for_generation is explicitly overwritten. However, it doesn't directly inherit from GenerationMixin. \nFrom 👉v4.50👈 onwards, PreTrainedModel will NOT inherit from GenerationMixin, and this model will lose the ability to call generate and other related functions.\n\n
-            - If you're using trust_remote_code=True, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes\n
-            - If you are the owner of the model architecture code, please modify your model class such that it inherits from GenerationMixin (after PreTrainedModel, otherwise you'll get an exception).\n
-            - If you are not the owner of the model architecture class, please contact the model code owner to update it.\n
-              Some weights of the model checkpoint at /home/xu_zheng/model/google-bert/bert-large-uncased/ were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', \n'cls.seq_relationship.bias', 'cls.seq_relationship.weight']\n
-          - This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n
-          - This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n
-            [nltk_data] Downloading package wordnet to /home/xu_zheng/nltk_data...\n
-            [nltk_data]   Package wordnet is already up-to-date!\n
-            {'TPR': 0.99, 'F1': 0.9924812030075187, 'ACC': 0.9925}\n`]},
+        res: ["Detectability-add-2.png"]},
 
 
       {id: 13, name: 'c4', model_id: 5, 
         code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--opt-1.3b/ --metric PPL", 
-        res: [`Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`]},
+        res: `Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
       {id: 14, name: 'WMT16_de_en', model_id: 5, 
         code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--opt-1.3b/ --metric PPL", 
-        res: [`Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`]},
+        res: `Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
       {id: 15, name: 'HumanEval', model_id: 5, 
         code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--opt-1.3b/ --metric PPL", 
-        res: [`Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`]},
+        res: `Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
 
       {id: 16, name: 'c4', model_id: 6, 
         code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--llama-2-7B/ --metric PPL", 
-        res: [`Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`]},
+        res: `Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
       {id: 17, name: 'WMT16_de_en', model_id: 6, 
         code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--llama-2-7B/ --metric PPL", 
-        res: [`Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`]},
+        res: `Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
       {id: 18, name: 'HumanEval', model_id: 6, 
         code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--llama-2-7B/ --metric PPL", 
-        res: [`Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`]},
+        res: `Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
     
   ]],
