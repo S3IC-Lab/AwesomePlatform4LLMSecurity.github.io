@@ -50,10 +50,8 @@ var select_data = [
     { id: 1, name: 'Order Bias' },
     { id: 2, name: 'Compassion Bias' },
     { id: 3, name: 'Egocentric Bias' },
-    { id: 4, name: 'Method 4' },
   ],[
     {id: 1, name: 'Deepseek-r1:70b', method_id: 1},
-    {id: 2, name: 'Model 2', method_id: 1},
     {id: 3, name: 'Model 3', method_id: 2},
     {id: 4, name: 'Model 4', method_id: 2},
     {id: 5, name: 'Model 1', method_id: 3},
