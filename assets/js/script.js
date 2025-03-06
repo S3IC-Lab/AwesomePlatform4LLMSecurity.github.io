@@ -133,6 +133,28 @@ var select_data = [
   // Fidelity
   [[
     { id: 1, name: 'Add watermark' },
+    { id: 2, name: 'Method 2' },
+    { id: 3, name: 'Method 3' },
+    { id: 4, name: 'Method 4' },
+  ],[
+    {id: 1, name: 'Model 1', method_id: 1},
+    {id: 2, name: 'Model 2', method_id: 1},
+    {id: 3, name: 'Model 3', method_id: 2},
+    {id: 4, name: 'Model 4', method_id: 2},
+    {id: 5, name: 'Model 1', method_id: 3},
+    {id: 6, name: 'Model 2', method_id: 3},
+    {id: 7, name: 'Model 1', method_id: 4},
+  ],[
+    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: ["test.png"]},
+    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: ["test.png"]},
+    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: ["test.png"]},
+    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: ["test.png"]},
+    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: ["test.png"]},
+    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: ["test.png"]},
+  ]],
+  // Detectability
+  [[
+    { id: 1, name: 'Add watermark' },
     { id: 2, name: 'Detection watermark' },
     { id: 3, name: 'Evaluate watermark' },
   ],[
@@ -330,28 +352,6 @@ var select_data = [
         res: [`Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`]},
 
     
-  ]],
-  // Detectability
-  [[
-    { id: 1, name: 'Add watermark' },
-    { id: 2, name: 'Method 2' },
-    { id: 3, name: 'Method 3' },
-    { id: 4, name: 'Method 4' },
-  ],[
-    {id: 1, name: 'Model 1', method_id: 1},
-    {id: 2, name: 'Model 2', method_id: 1},
-    {id: 3, name: 'Model 3', method_id: 2},
-    {id: 4, name: 'Model 4', method_id: 2},
-    {id: 5, name: 'Model 1', method_id: 3},
-    {id: 6, name: 'Model 2', method_id: 3},
-    {id: 7, name: 'Model 1', method_id: 4},
-  ],[
-    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: ["test.png"]},
-    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: ["test.png"]},
-    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: ["test.png"]},
-    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: ["test.png"]},
-    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: ["test.png"]},
-    {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: ["test.png"]},
   ]],
   // Privacy
   [[
