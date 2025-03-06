@@ -132,7 +132,7 @@ var select_data = [
   ]],
   // Fidelity
   [[
-    { id: 1, name: 'Add watermark' },
+    { id: 1, name: 'Method 1' },
     { id: 2, name: 'Method 2' },
     { id: 3, name: 'Method 3' },
     { id: 4, name: 'Method 4' },
