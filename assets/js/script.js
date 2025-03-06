@@ -137,8 +137,8 @@ var select_data = [
     { id: 3, name: 'Method 3' },
     { id: 4, name: 'Method 4' },
   ],[
-    {id: 1, name: 'llama-2-7B', method_id: 1},
-    {id: 2, name: 'opt-1.3b', method_id: 1},
+    {id: 1, name: 'opt-1.3b', method_id: 1},
+    {id: 2, name: 'llama-2-7B', method_id: 1},
     {id: 3, name: 'Model 3', method_id: 2},
     {id: 4, name: 'Model 4', method_id: 2},
     {id: 5, name: 'Model 1', method_id: 3},
@@ -147,13 +147,39 @@ var select_data = [
   ],[
     {id: 1, name: 'c4', model_id: 1, 
       code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--opt-1.3b/ --visualize_or_not True', 
+      res: [`Examples: \nThe watermarked text:\n
+        Cluster comprises IBM's Opteron-based eServer 325 server and systems management software and storage devices that can run Linux and Windows operating systems.\n\n
+        IBM's servers can run Linux, Solaris, Windows and OS X, among others, each one with a new operating system capability, Watson says. It can handle databases but it's specifically designed to do machine learning research.\n\n
+        It can deliver results ranging from queries and search results to more complex analytics that can take weeks or even months to build.\n\n
+        According to Watson, using its database capabilities, the machines can handle "high-performance computing applications" and have a larger memory pool plus more memory and processing power.\n\n
+        Data are not generated from scratch -- instead they're linked from other computers through "truckloads of data," Watson said. They form a network that the machine learns through.\n\n
+        The data form a massive and growing database. This becomes IBM's main database hub.\n\n
+        Its cluster enables the machine to do things like identify and predict trends, including natural language processing and social media, Watson said.\n\n\n 
+        The result: \n1."Fidelity-add_watermark-1.png"\n2."Fidelity-add_watermark-2.png"`]},
+
+    {id: 2, name: 'WMT16_de_en', model_id: 1, 
+      code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--opt-1.3b/ --visualize_or_not True', 
+      res: ["Fidelity-add_watermark-1.png"]},
+
+    {id: 3, name: 'HumanEval', model_id: 1, 
+      code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--opt-1.3b/ --visualize_or_not True', 
+      res: ["Fidelity-add_watermark-1.png"]},
+
+    {id: 4, name: 'c4', model_id: 2, 
+      code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--llama-2-7B/ --visualize_or_not True', 
+      res: ["Fidelity-add_watermark-1.png"]},
+
+    {id: 5, name: 'WMT16_de_en', model_id: 2, 
+      code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--llama-2-7B/ --visualize_or_not True', 
+      res: ["Fidelity-add_watermark-1.png"]},
+
+    {id: 5, name: 'WMT16_de_en', model_id: 2, 
+      code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--llama-2-7B/ --visualize_or_not True', 
       res: ["Fidelity-add_watermark-1.png"]},
 
 
-    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
-    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
-    {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
-    {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+
+    
     {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
   ]],
   // Detectability
