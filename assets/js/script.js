@@ -146,10 +146,10 @@ var select_data = [
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
     {id: 1, name: 'c4', model_id: 1, 
-      code: 'python test.py', 
-      res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+      code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--opt-1.3b/ --visualize_or_not True', 
+      res: ["Fidelity-add_watermark-1.png"]},
 
-      
+
     {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
     {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
     {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
