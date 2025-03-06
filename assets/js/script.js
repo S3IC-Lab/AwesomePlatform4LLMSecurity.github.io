@@ -153,7 +153,7 @@ var select_data = [
     {id: 11, name: 'Meta-Llama-3-8B-Instruct', method_id: 6},
     {id: 12, name: 'openchat-3.5-0106', method_id: 6},
   ],[
-    {id: 1, name: 'flores200', model_id: 1, code: ' python3 ../judgelab/instances/llm_judge.py --data-dir /home/dataset/flores200/dev --attack_model /home/model/Meta-Llama-3-8B-Instruct --attack_model-id Meta-Llama-3-8B-Instruct --attack naive_attack --judge score  --source "Chinese (Simplified)" --target English', res: ["judge_score is: \nRating: 8.1\ntarget model score is Rating: 8.1\nsdr score is [0.5782316452264785]"]},
+    {id: 1, name: 'flores200', model_id: 1, code: 'conda activate s3di\npython3 ../../judgelab/instances/llm_judge.py --data-dir /home/dataset/flores200/dev --attack_model /home/model/Meta-Llama-3-8B-Instruct --attack_model-id Meta-Llama-3-8B-Instruct --attack naive_attack --judge score  --source "Chinese (Simplified)" --target English', res: ["judge_score is: \nRating: 8.1\ntarget model score is Rating: 8.1\nsdr score is [0.5782316452264785]"]},
   ]],
   // Detectability
   [[
