@@ -68,8 +68,7 @@ var select_data = [
       Valid response percentage: 91.14%\n
       Valid responses: 957\n
       Consistency percentage: 86.29%\n
-      Consistency count: 906\n
-      The result: \n1.xxx\n2.xxx\n3.xxx`
+      Consistency count: 906\n`
     },
 
     {id: 2, 
@@ -85,8 +84,7 @@ var select_data = [
       Valid response percentage: 86.67%\n
       Valid responses: 91\n
       Consistency percentage: 83.81%\n
-      Consistency count: 88\n 
-      The result: \n1.xxx\n2.xxx\n3.xxx`
+      Consistency count: 88\n`
     },
       
     {id: 3, 
@@ -99,8 +97,7 @@ var select_data = [
       Selection bias percentage: 60.00%\n
       Selection bias count: 63\n
       Valid response percentage: 75.24%\n
-      Valid responses: 79\n 
-      The result: \n1.xxx\n2.xxx\n3.xxx`
+      Valid responses: 79\n`
     },
 
   ]],
@@ -135,20 +132,24 @@ var select_data = [
   ]],
   // Fidelity
   [[
-    { id: 1, name: 'Method 1' },
+    { id: 1, name: 'Add watermark' },
     { id: 2, name: 'Method 2' },
     { id: 3, name: 'Method 3' },
     { id: 4, name: 'Method 4' },
   ],[
-    {id: 1, name: 'Model 1', method_id: 1},
-    {id: 2, name: 'Model 2', method_id: 1},
+    {id: 1, name: 'llama-2-7B', method_id: 1},
+    {id: 2, name: 'opt-1.3b', method_id: 1},
     {id: 3, name: 'Model 3', method_id: 2},
     {id: 4, name: 'Model 4', method_id: 2},
     {id: 5, name: 'Model 1', method_id: 3},
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 1, name: 'c4', model_id: 1, 
+      code: 'python test.py', 
+      res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+
+      
     {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
     {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
     {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
@@ -157,7 +158,7 @@ var select_data = [
   ]],
   // Detectability
   [[
-    { id: 1, name: 'Method 1' },
+    { id: 1, name: 'Add watermark' },
     { id: 2, name: 'Method 2' },
     { id: 3, name: 'Method 3' },
     { id: 4, name: 'Method 4' },
