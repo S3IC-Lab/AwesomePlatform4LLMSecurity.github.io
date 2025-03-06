@@ -33,7 +33,7 @@ Thanks for https://github.com/TrustGen/TrustGen.github.io.
   }];
   ```
 
-- 每个模块已完成的方法个数（name为模块名称，value为个数）
+- 每个模块已完成的方法个数（name为模块名称，value为个数，已实现自动读取）
 
   ```javascript
   var finished = [{
@@ -105,7 +105,7 @@ Thanks for https://github.com/TrustGen/TrustGen.github.io.
   var dataset_all = 24;
   ```
 
-- 已实现模型和数据集（个数会自动读取数组长度）
+- 已实现模型和数据集（已实现自动读取）
 
   ```javascript
   var models = ["Model 1", "Model 2", "Model 3", "Model 4"];

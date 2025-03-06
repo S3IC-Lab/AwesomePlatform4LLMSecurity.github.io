@@ -19,27 +19,6 @@ var overview = [{
   value: 40
 }];
 
-// The number of the finished methods.
-var finished = [{
-  name: 'Fairness',
-  value: 3
-},{
-  name: 'Truthfulness',
-  value: 5
-},{
-  name: 'Fidelity',
-  value: 5
-},{
-  name: 'Detectability',
-  value: 10
-},{
-  name: 'Privacy',
-  value: 5
-},{
-  name: 'Safety',
-  value: 15
-}];
-
 // The data of the methods, models and datasets.
 // The first dimension is the category of the methods.
 // The second dimension is the data of the models and datasets. method_id is the id of the method.
@@ -646,9 +625,6 @@ Current Response:\n
 var model_all = 20;
 var dataset_all = 24;
 
-// The list of the models and datasets.
-var models = ["Model 1", "Model 2", "Model 3", "Model 4"];
-var datasets = ["Dataset 1", "Dataset 2", "Dataset 3", "Dataset 4"];
 // var category=['Bias','Hallucination','Judge','Watermark','Privacy','Jailbreak'];
 var category=['Fairness','Truthfulness','Fidelity','Detectability','Privacy','Safety']
 var color=['#d7e6fd','#faf566','#f3d7b8','#e9e2ee','#c0edd7','#fbcae6'];
@@ -666,6 +642,28 @@ var arr_method = select_data[0][0];
 var arr_model = select_data[0][1];
 var arr_dataset = select_data[0][2];
 var nowModule = 'Fairness';
+
+// The number of the finished methods.
+var finished = [];
+for (var i = 0; i < select_data.length; i++) {
+  finished.push({name: category[i], value: select_data[i][0].length});
+}
+
+// The list of the models and datasets.
+var models = [];
+var datasets = [];
+for (var i = 0; i < select_data.length; i++) {
+  for (var j = 0; j < select_data[i][1].length; j++) {
+    if (!models.includes(select_data[i][1][j].name)) {
+      models.push(select_data[i][1][j].name);
+    }
+  }
+  for (var j = 0; j < select_data[i][2].length; j++) {
+    if (!datasets.includes(select_data[i][2][j].name)) {
+      datasets.push(select_data[i][2][j].name);
+    }
+  }
+}
 
 function createOverviewChart(overview, finished) {
   var data = [];
@@ -996,7 +994,7 @@ function createChart(all, finished, div, color) {
       backgroundColor: 'transparent',
       formatter: function (params) {
         if (params.name === 'Finished') {
-          var li = "<h5 style='color: #212529; font-size: 14px;'>Finished" + (div === 'model' ? ' Models' : ' Datasets') + "</h5><ul>";
+          var li = "<h5 style='color: #212529; margin-left: 10px;'>Finished" + (div === 'model' ? ' Models' : ' Datasets') + "</h5><ul>";
           if (div === 'model') {
             for (var i = 0; i < models.length; i++) {
               li += '<li>' + models[i] + '</li>';
@@ -1010,12 +1008,11 @@ function createChart(all, finished, div, color) {
               <div style="
                   color: #212529;
                   border: 2px solid ${color[0]};
-                  padding: 10px;
+                  padding: 10px 10px 0 0;
                   border-radius: 5px;
                   background-color: #fff;
-                  max-height: 200px;
                   overflow: auto;
-              ">
+              " id="tooltip">
                   ${li}</ul>
               </div>
           `;
