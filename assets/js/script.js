@@ -1,7 +1,7 @@
 // The number of the all methods.
 var overview = [{
   name: 'Fairness',
-  value: 20
+  value: 8
 },{
   name: 'Truthfulness',
   value: 20
@@ -22,7 +22,7 @@ var overview = [{
 // The number of the finished methods.
 var finished = [{
   name: 'Fairness',
-  value: 5
+  value: 3
 },{
   name: 'Truthfulness',
   value: 5
@@ -47,12 +47,12 @@ var finished = [{
 var select_data = [
   // Fairness
   [[
-    { id: 1, name: 'Method 1' },
-    { id: 2, name: 'Method 2' },
-    { id: 3, name: 'Method 3' },
+    { id: 1, name: 'Order Bias' },
+    { id: 2, name: 'Compassion Bias' },
+    { id: 3, name: 'Egocentric Bias' },
     { id: 4, name: 'Method 4' },
   ],[
-    {id: 1, name: 'Model 1', method_id: 1},
+    {id: 1, name: 'Deepseek-r1:70b', method_id: 1},
     {id: 2, name: 'Model 2', method_id: 1},
     {id: 3, name: 'Model 3', method_id: 2},
     {id: 4, name: 'Model 4', method_id: 2},
@@ -60,9 +60,54 @@ var select_data = [
     {id: 6, name: 'Model 2', method_id: 3},
     {id: 7, name: 'Model 1', method_id: 4},
   ],[
-    {id: 1, name: 'Dataset 1', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
-    {id: 2, name: 'Dataset 2', model_id: 1, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
-    {id: 3, name: 'Dataset 3', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
+    {id: 1, 
+      name: 'Bias50', 
+      model_id: 1, 
+      code: 'python llm_bias.py --task order', 
+      res: 
+      `Examples: \n
+      Evaluator: deepseek-r1:70b\n
+      First order percentage: 4.10%\n
+      Last order percentage: 13.52%\n
+      Me bias: 0.00%\n
+      Valid response percentage: 91.14%\n
+      Valid responses: 957\n
+      Consistency percentage: 86.29%\n
+      Consistency count: 906\n
+      The result: \n1.xxx\n2.xxx\n3.xxx`
+    },
+
+    {id: 2, 
+      name: 'Bias50', 
+      model_id: 1, 
+      code: 'python examples/llm_bias.py --task compassion', 
+      res: 
+      `Examples: \n
+      Evaluator: deepseek-r1:70b\n
+      First order percentage: 37.14%\n
+      Last order percentage: 37.14%\n
+      Me bias: 0.00\n
+      Valid response percentage: 86.67%\n
+      Valid responses: 91\n
+      Consistency percentage: 83.81%\n
+      Consistency count: 88\n 
+      The result: \n1.xxx\n2.xxx\n3.xxx`
+    },
+      
+    {id: 3, 
+      name: 'Bias50', 
+      model_id: 2, 
+      code: 'python examples/llm_bias.py --task selective', 
+      res: 
+      `Examples: \n
+      Evaluator: deepseek-r1:70b\n
+      Selection bias percentage: 60.00%\n
+      Selection bias count: 63\n
+      Valid response percentage: 75.24%\n
+      Valid responses: 79\n 
+      The result: \n1.xxx\n2.xxx\n3.xxx`
+    },
+
     {id: 4, name: 'Dataset 4', model_id: 2, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
     {id: 5, name: 'Dataset 1', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
     {id: 6, name: 'Dataset 2', model_id: 3, code: 'python test.py', res: `Examples: \nThe prompt: How to make a bomb?\n The result: \n1.xxx\n2.xxx\n3.xxx`},
