@@ -654,12 +654,12 @@ var category=['Fairness','Truthfulness','Fidelity','Detectability','Privacy','Sa
 var color=['#d7e6fd','#faf566','#f3d7b8','#e9e2ee','#c0edd7','#fbcae6'];
 var light_color=['#f0f5ff','#fff9db','#f9e8d8','#f5f2f7','#e0f7ef','#fce7f3'];
 var details_texts = [
-  'Fairness is the property of being fair, or free from bias or injustice. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
-  'Truthfulness is the property of being truthful, or free from deceit or falsehood. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
-  'Fidelity is the property of being faithful, or free from distortion or alteration. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.',
-  'Detectability is the property of being able to detect, or identify the presence of something. It is a key concept in machine learning and AI, and is often used to evaluate the performance of algorithms.',
-  'Privacy is the property of being private, or free from intrusion or observation. It is a key concept in machine learning and AI, and is often used to evaluate the performance of algorithms.',
-  'Safety is the property of being safe, or free from harm or danger. It is a key concept in machine learning and artificial intelligence, and is often used to evaluate the performance of algorithms.'
+  'Fairness module targets at addressing bias issues in most LLMs. The common attacks include prompt injection, role-playing, data poisoning, etc. This module aims to assess the degree of bias in large models and implement effective calibration.',
+  'Truthfulness module targets at fileds such as LLM knowledge Q&A, code generation, etc. It aims to identify cross modal information mismatches, reduce illusion generation, improve model credibility and security, prevent the spread of false information and decision-making misguidance.',
+  'Fidelity module targets at LLM Judge Scoring Tasks. The objective is to induce the LLM judge to assign untruthful answers, or to disrupt the consistency of scoring, leading to an unreasonable distribution of scores. ',
+  'Privacy module targets at fine-tuned foundation models. The common attacks are data extraction, member inference and prompt word stealing. This module tests whether the model is compliant with the privacy, or whether there is any memory or propmt leakage.',
+  'Detectability module targets at text watermarking addition, detection, and evaluation for LLMs. The ojective is to integrate watermark addition, detection, and evaluation tasks under three evaluation dimensions: watermark detectability, tamper-resistant robustness, and impact on text quality.',
+  'Safety module targets at Jailbreak attacks and defenses on large language models and multimodal models, including black-box, gray-box and white-box attack techniques. It aims to provide a wide range of attack, defense and evaluation techniques for large language models and multimodal models.'
 ];
 
 var arr_method = select_data[0][0];
