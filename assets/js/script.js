@@ -1094,8 +1094,10 @@ function getFirstData(type = 'Fairness') {
       });
       if (results.res instanceof Array)
         document.getElementById(nowModule).innerHTML = results.res.map(item => `<img src="assets/img/res/${item}" style="width: 30%; height: auto; margin: 10px;">`).join('');
-      else
+      else{
+        results.res = results.res.replace(/\n\n/g, '\n');
         document.getElementById(nowModule).innerHTML = results.res.replace(/\n/g, '<br>');
+      }
       document.getElementById('code').innerHTML = results.code
       document.getElementById('run').addEventListener("click",function(){
         // window.location.href = "https://www.baidu.com"
