@@ -1093,7 +1093,10 @@ function getFirstData(type = 'Fairness') {
         return item.id == datasetId;
       });
       if (results.res instanceof Array)
-        document.getElementById(nowModule).innerHTML = results.res.map(item => `<img src="assets/img/res/${item}" style="width: 30%; height: auto; margin: 10px;">`).join('');
+        if (results.res.length === 1)
+          document.getElementById(nowModule).innerHTML = results.res.map(item => `<img src="assets/img/res/${item}" style="width: 50%; height: auto; margin: 10px;">`).join('');
+        else
+          document.getElementById(nowModule).innerHTML = results.res.map(item => `<img src="assets/img/res/${item}" style="width: 30%; height: auto; margin: 10px;">`).join('');
       else{
         results.res = results.res.replace(/\n\n/g, '\n');
         document.getElementById(nowModule).innerHTML = results.res.replace(/\n/g, '<br>');
