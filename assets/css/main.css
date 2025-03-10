@@ -2280,6 +2280,7 @@ data-table {
   display: block;
   line-height: 30px;
   margin-bottom: 10px;
+  min-width: 110px;
 }
 
 #finished_methods {
