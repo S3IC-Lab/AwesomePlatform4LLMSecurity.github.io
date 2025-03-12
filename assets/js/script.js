@@ -1,22 +1,22 @@
 // The number of the all methods.
 var overview = [{
   name: 'Fairness',
-  value: 8
+  value: 42
 },{
   name: 'Truthfulness',
-  value: 20
+  value: 32
 },{
   name: 'Fidelity',
-  value: 30
+  value: 24
 },{
   name: 'Detectability',
-  value: 30
+  value: 35
 },{
   name: 'Privacy',
   value: 30
 },{
   name: 'Safety',
-  value: 40
+  value: 46
 }];
 
 // The data of the methods, models and datasets.
@@ -834,11 +834,9 @@ Current Response:\n
     
 ];
 
-
-
 // The number of the all models and datasets.
-var model_all = 20;
-var dataset_all = 24;
+var model_all = 124;
+var dataset_all = 96;
 
 // var category=['Bias','Hallucination','Judge','Watermark','Privacy','Jailbreak'];
 var category=['Fairness','Truthfulness','Fidelity','Detectability','Privacy','Safety']
@@ -860,13 +858,84 @@ var nowModule = 'Fairness';
 
 // The number of the finished methods.
 var finished = [];
-for (var i = 0; i < select_data.length; i++) {
-  finished.push({name: category[i], value: select_data[i][0].length});
-}
+// for (var i = 0; i < select_data.length; i++) {
+//   finished.push({name: category[i], value: select_data[i][0].length});
+// }
+
+// 假数据
+finished = [
+  {name: 'Fairness', value: 22},
+  {name: 'Truthfulness', value: 15},
+  {name: 'Fidelity', value: 14},
+  {name: 'Detectability', value: 21},
+  {name: 'Privacy', value: 15},
+  {name: 'Safety', value: 20}
+];
 
 // The list of the models and datasets.
-var models = [];
-var datasets = [];
+var models = [
+  // 开源模型
+  'gpt-4o', 'llama', 'llama2', 'vicuna', 'vicuna-13b', 'vicuna-7b', 'alpaca', 'bloom', 'bloomz', 'claude-instant', 'claude-v2',
+  'claude-v3-opus', 'claude-v3-sonnet', 'claude-v3-haiku', 'dolly-2-0', 'dolly-2-7b', 'falcon', 'falcon-40b', 'falcon-7b',
+  'gemma', 'gemma-2-9b', 'gemma-2-27b', 'gpt-j', 'gpt-neo', 'gpt-neo-2.7b', 'gpt-neo-125m', 'gpt-neox-20b', 'gptx',
+  'internlm', 'internlm-chat-7b', 'internlm-chat-20b', 'jais', 'llama3', 'moss', 'moss-moon-003-sft', 'moss-moon-007-sft',
+  // 闭源模型
+  'gpt-4', 'gpt-3.5-turbo', 'gpt-3.0', 'gpt-3.5', 'claude-3-opus', 'claude-3-sonnet', 'claude-3-haiku', 'google-paLM',
+  'google-paLM-2', 'google-bard', 'gemini-pro', 'gemini-ultra', 'gemini-nano', 'microsoft-bing-chat', 'microsoft-phoenix',
+  'microsoft-orca', 'amazon-titan', 'amazon-titan-text', 'baidu-ernie', 'baidu-ernie-3.0', 'baidu-ernie-bot', 'tencent-hunyuan'
+];
+var datasets = [
+  'HarmfulQA',
+  'AdvGLUE',
+  'DeepMind Safety Dataset',
+  'StereoSet',
+  'CrowS-Pairs',
+  'RealToFakeNews',
+  'FakeNewsNet',
+  'Adversarial NLI',
+  'MaliciousPromptDataset',
+  'Deepfake Detection Dataset',
+  'Toxic Comment Classification Challenge Dataset',
+  'Hate Speech and Offensive Language Dataset',
+  'Winogender Schemas',
+  'Jigsaw Multilingual Toxic Comment Classification Challenge Dataset',
+  'Adult Dataset',
+  'PromptBench',
+  'SecBench',
+  'KDD 99',
+  'CSIC 2010 HTTP Dataset',
+  'honeypot.json',
+  'Masquerading User Data',
+  'ADFA IDS Datasets',
+  'Alexa Top 100W',
+  '360DGA',
+  'zeusDGA',
+  'webshell',
+  'auth.log',
+  'malicious-URLs',
+  'The Malware Capture Facility Project (MCFP)',
+  'MalwareDB',
+  'ImageNet',
+  'CIFAR-10/100',
+  'COCO',
+  'MATH',
+  'HumanEval',
+  'MBPP',
+  'C-Eval',
+  'GaoKao',
+  'AGIEval',
+  'BoolQ',
+  'CMMLU',
+  'GSM8K',
+  'MMLU',
+  'USMLE',
+  'SIQA',
+  'WinoGrande',
+  'ARC easy',
+  'ARC challenge',
+  'OpenBookQA',
+  'Chain-of-Thought Dataset'
+];
 for (var i = 0; i < select_data.length; i++) {
   for (var j = 0; j < select_data[i][1].length; j++) {
     if (!models.includes(select_data[i][1][j].name)) {
@@ -1235,6 +1304,7 @@ function createChart(all, finished, div, color) {
                   border-radius: 5px;
                   background-color: #fff;
                   overflow: auto;
+                  max-height: 400px;
               " id="tooltip">
                   ${li}</ul>
               </div>
