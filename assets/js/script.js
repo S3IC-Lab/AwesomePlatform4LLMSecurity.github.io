@@ -199,15 +199,12 @@ var select_data = [
     {id: 4, name: 'FactPrompts', model_id: 2, code: 'python hallucination.py --category kbqa --api-model-name gpt-4', res: ["kbqa.png"]},
     {id: 5, name: 'RoSE', model_id: 3, code: 'python hallucination.py --category kbqa --api-model-name gpt-4o', res: ["kbqa.png"]},
     {id: 6, name: 'FactPrompts', model_id: 3, code: 'python hallucination.py --category kbqa --api-model-name gpt-4o', res: ["kbqa.png"]},
-    {id: 7, name: 'HumanEval', model_id: 4, code: 'python hallucination.py --category code --api-model-name gpt-3.5-turbo', res: ["h_code.png"]},
-    {id: 8, name: 'HumanEval', model_id: 5, code: 'python hallucination.py --category code --api-model-name gpt-4', res: ["h_code.png"]},
-    {id: 9, name: 'HumanEval', model_id: 6, code: 'python hallucination.py --category code --api-model-name gpt-4o', res: ["h_code.png"]},
+    {id: 7, name: 'HumanEval', model_id: 4, code: 'python hallucination.py --category code --api-model-name gpt-3.5-turbo', res: ["code.png"]},
+    {id: 8, name: 'HumanEval', model_id: 5, code: 'python hallucination.py --category code --api-model-name gpt-4', res: ["code.png"]},
+    {id: 9, name: 'HumanEval', model_id: 6, code: 'python hallucination.py --category code --api-model-name gpt-4o', res: ["code.png"]},
     {id: 10, name: 'GSM-Hard', model_id: 7, code: 'python hallucination.py --category math --api-model-name gpt-3.5-turbo', res: ["math.png"]},
     {id: 11, name: 'GSM-Hard', model_id: 8, code: 'python hallucination.py --category math --api-model-name gpt-4', res: ["math.png"]},
-    {id: 12, name: 'GSM-Hard', model_id: 9, code: 'python hallucination.py --category math --api-model-name gpt-4o', res:`
-      response accutacy: 1.0，\n
-      claim accuracy: 1.0\n`
-      ["math.png"]},
+    {id: 12, name: 'GSM-Hard', model_id: 9, code: 'python hallucination.py --category math --api-model-name gpt-4o', res:["math.png"]},
   ]],
   // Fidelity
   [[
