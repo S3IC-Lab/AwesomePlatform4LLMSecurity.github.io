@@ -478,7 +478,7 @@ var select_data = [
   ]],
   // Privacy
   [[
-    { id: 1, name: 'Conditional DEA_enron' },
+    { id: 1, name: 'Conditional DEA_xsum' },
     { id: 2, name: 'Conditional DEA_memrise' },
     { id: 3, name: 'Unconditional_DEA' },
     { id: 4, name: 'Naive_MIA' },
@@ -492,8 +492,8 @@ var select_data = [
     {id: 7, name: 'gpt2', method_id: 4},
     {id: 8, name: 'llama2', method_id: 4},
   ],[
-    {id: 1, name: 'enron', model_id: 1, 
-      code: 'python privacy.py --attack C_DEA --dataset enron', 
+    {id: 1, name: 'xsum', model_id: 1, 
+      code: 'python privacy.py --attack C_DEA --dataset xsum', 
       res: `The result is:\n
       The model is loaded successfully\n
       Start attack\n
@@ -508,7 +508,7 @@ var select_data = [
       'leak_rate_wo_reject': 3.33\n
       Process finished with exit code 0\n`},
 
-    {id: 2, name: 'enron', model_id: 2, code: 'python privacy.py --attack C_DEA --dataset enron',
+    {id: 2, name: 'xsum', model_id: 2, code: 'python privacy.py --attack C_DEA --dataset xsum',
       res: `The result is:\n
       The model is loaded successfully\n
       Start attack\n
