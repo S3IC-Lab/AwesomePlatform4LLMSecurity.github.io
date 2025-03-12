@@ -42,7 +42,7 @@ var select_data = [
       model_id: 1, 
       code: 'python llm_bias.py --evaluators deepseek-r1:70b --task order --dataset bias50', 
       res: 
-      `Examples: \n
+      `
       The result is:\n
       Evaluator: deepseek-r1:70b\n
       First order percentage: 4.10%\n
@@ -52,7 +52,7 @@ var select_data = [
       Valid responses: 957\n
       Consistency percentage: 86.29%\n
       Consistency count: 906\n\n
-      Description of results:\n
+      The description of results:\n
       Evaluator: 评估所使用的模型。\n
       First order percentage: 模型选择第一位次回复为最优回复的概率，反映其 First Order Bias 的程度。\n
       Last order percentage: 模型选择最后位次回复为最优回复的概率，反映其 Last Order Bias 的程度。\n
@@ -67,7 +67,7 @@ var select_data = [
       model_id: 2, 
       code: 'python llm_bias.py --evaluators deepseek-r1:70b --task compassion --dataset bias50', 
       res: 
-      `Examples: \n
+      `
       The result is:\n
       Evaluator: deepseek-r1:70b\n
       First order percentage: 37.14%\n
@@ -76,7 +76,7 @@ var select_data = [
       Valid responses: 91\n
       Consistency percentage: 83.81%\n
       Consistency count: 88\n\n
-      Description of results:\n
+      The description of results:\n
       Evaluator: 评估所使用的模型。\n
       First order percentage: 模型选择第一位次回复为最优回复的概率，反映其在 Compassion Bias 测试中对不同名称的倾向性。\n
       Last order percentage: 模型选择最后位次回复为最优回复的概率，反映其在 Compassion Bias 测试中对不同名称的倾向性。\n
@@ -91,14 +91,14 @@ var select_data = [
       model_id: 3, 
       code: 'python llm_bias.py --evaluators deepseek-r1:70b --task selective --dataset bias50', 
       res: 
-      `Examples: \n
+      `
       The result is:\n
       Evaluator: deepseek-r1:70b\n
       Selection bias percentage: 60.00%\n
       Selection bias count: 63\n
       Valid response percentage: 75.24%\n
       Valid responses: 79\n\n
-      Description of results:\n
+      The description of results:\n
       Evaluator: 评估所使用的模型。\n
       Selection bias percentage: 模型在测试中表现出选择偏差的概率，即模型在相同条件下更倾向于选择某类回复的程度。\n
       Selection bias count: 模型在测试中被判定为存在选择偏差的回答次数。\n
@@ -111,7 +111,7 @@ var select_data = [
       model_id: 4, 
       code: 'python llm_bias.py --evaluators llama3.1:8b --task order --dataset bias50', 
       res: 
-      `Examples: \n
+      `
       The result is:\n
       Evaluator: llama3.1:8b\n
       First order percentage: 38.08%\n
@@ -120,7 +120,7 @@ var select_data = [
       Valid responses: 4450\n
       Consistency percentage: 71.47%\n
       Consistency count: 3752\n\n
-      Description of results:\n
+      The description of results:\n
       Evaluator: 评估所使用的模型。 \n 
       First order percentage: 模型选择第一位次回复为最优回复的概率，反映其 First Order Bias 的程度。\n
       Last order percentage: 模型选择最后位次回复为最优回复的概率，反映其 Last Order Bias 的程度。\n
@@ -135,7 +135,7 @@ var select_data = [
       model_id: 5, 
       code: 'python llm_bias.py --evaluators llama3.1:8b --task compassion --dataset bias50', 
       res: 
-      `Examples: \n
+      `
       The result is:\n
       Evaluator: llama3.1:8b\n
       First order percentage: 8.67%\n
@@ -144,7 +144,7 @@ var select_data = [
       Valid responses: 638\n
       Consistency percentage: 35.90%\n
       Consistency count: 377\n\n
-      Description of results:\n
+      The description of results:\n
       Evaluator: 评估所使用的模型。\n
       First order percentage: 模型选择第一位次回复为最优回复的概率，反映其在 Compassion Bias 测试中对不同名称的倾向性。\n
       Last order percentage: 模型选择最后位次回复为最优回复的概率，反映其在 Compassion Bias 测试中对不同名称的倾向性。\n
@@ -159,14 +159,14 @@ var select_data = [
       model_id: 6, 
       code: 'python llm_bias.py --evaluators llama3.1:8b --task selective --dataset bias50', 
       res: 
-      `Examples: \n
+      `
       The result is:\n
       Evaluator: llama3.1:8b\n
       Selective bias percentage: 53.90%\n
       Selective count: 2830\n
       Valid response percentage: 94.13%\n
       Valid responses: 4942\n\n
-      Description of results:\n
+      The description of results:\n
       Evaluator: 评估所使用的模型。\n
       Selection bias percentage: 模型在测试中表现出选择偏差的概率，即模型在相同条件下更倾向于选择某类回复的程度。\n
       Selection bias count: 模型在测试中被判定为存在选择偏差的回答次数。\n
