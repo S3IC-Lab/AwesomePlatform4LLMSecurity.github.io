@@ -204,7 +204,10 @@ var select_data = [
     {id: 9, name: 'HumanEval', model_id: 6, code: 'python hallucination.py --category code --api-model-name gpt-4o', res: ["h_code.png"]},
     {id: 10, name: 'GSM-Hard', model_id: 7, code: 'python hallucination.py --category math --api-model-name gpt-3.5-turbo', res: ["math.png"]},
     {id: 11, name: 'GSM-Hard', model_id: 8, code: 'python hallucination.py --category math --api-model-name gpt-4', res: ["math.png"]},
-    {id: 12, name: 'GSM-Hard', model_id: 9, code: 'python hallucination.py --category math --api-model-name gpt-4o', res: ["math.png"]},
+    {id: 12, name: 'GSM-Hard', model_id: 9, code: 'python hallucination.py --category math --api-model-name gpt-4o', res:`
+      response accutacy: 1.0，\n
+      claim accuracy: 1.0\n`
+      ["math.png"]},
   ]],
   // Fidelity
   [[
