@@ -163,23 +163,19 @@
     <p>
         <span class="highlight">OmniTrust</span> is a comprehensive security platform designed to evaluate the trustworthiness of large language models (LLMs) and multimodal models. Supporting both white-box and black-box LLMs, OmniTrust offers an <span class="highlight">out-of-the-box toolkit</span> that is intuitive and easy to use—allowing developers and researchers to run complex security evaluations with a <span class="highlight">single line of code</span>.
     </p>
+
+    <div class="module-list">
+        <p>At its core, OmniTrust comprises six powerful modules that cover key areas of model integrity and safety:</p>
+        <div class="module-item">1. <span class="highlight">Safety Module</span>: Protects against a wide array of attack techniques, including AutoDAN, CipherChat, and more, enabling both attack and defense evaluation on LLMs and multimodal models.</div>
+        <div class="module-item">2. <span class="highlight">Privacy Module</span>: Focuses on fine-tuned models to detect data extraction, membership inference, and prompt word stealing attacks, ensuring compliance with privacy standards.</div>
+        <div class="module-item">3. <span class="highlight">Detectability Module</span>: Provides watermarking addition, detection, and evaluation, safeguarding against tampering and ensuring content integrity.</div>
+        <div class="module-item">4. <span class="highlight">Truthfulness Module</span>: Evaluates knowledge consistency and reasoning accuracy across tasks such as Q&A, code generation, and cross-modal content generation, mitigating the risk of misinformation.</div>
+        <div class="module-item">5. <span class="highlight">Fidelity Module</span>: Protects LLMs from prompt injection attacks, ensuring consistent and fair scoring mechanisms for judge-based tasks.</div>
+        <div class="module-item">6. <span class="highlight">Fairness Module</span>: Analyzes and mitigates bias in LLMs, providing insights into potential issues such as egocentric or attentional bias, and offering solutions for effective calibration.</div>
+    </div>
+
     <p>
-        At its core, OmniTrust comprises six powerful modules that cover key areas of model integrity and safety:
-
-        1. <span class="highlight">Safety Module</span>: Protects against a wide array of attack techniques...
-
-        2. <span class="highlight">Privacy Module</span>: Focuses on fine-tuned models to detect data extraction...
-
-        3. <span class="highlight">Detectability Module</span>: Provides watermarking addition, detection...
-
-        4. <span class="highlight">Truthfulness Module</span>: Evaluates knowledge consistency and reasoning accuracy...
-
-        5. <span class="highlight">Fidelity Module</span>: Protects LLMs from prompt injection attacks...
-
-        6. <span class="highlight">Fairness Module</span>: Analyzes and mitigates bias in LLMs...
-    </p>
-    <p>
-        OmniTrust comes with a <span class="highlight">wide range of datasets</span> tailored for each module... The platform’s <span class="highlight">simplicity is key</span>: a single line of code allows users to run any module... making it a <span class="highlight">powerful and user-friendly solution</span> for securing and evaluating generative foundation models.
+        OmniTrust comes with a <span class="highlight">wide range of datasets</span> tailored for each module, along with complete metrics to evaluate the overall trustworthiness of a model. The platform’s <span class="highlight">simplicity is key</span>: a single line of code allows users to run any module, choose models, load datasets, and generate detailed, actionable reports—making it a <span class="highlight">powerful and user-friendly solution</span> for securing and evaluating generative foundation models.
     </p>
 </div>
 
@@ -190,7 +186,29 @@
     padding: 0 0.2em;
     margin: 0 -0.2em;
     box-decoration-break: clone;
+    display: inline;
 }
+
+.module-list {
+    margin: 1em 0;
+}
+
+.module-item {
+    display: block;
+    margin-bottom: 0.75em;
+    padding-left: 2em;
+    text-indent: -1.5em;
+    line-height: 1.5;
+}
+
+.module-item::before {
+    content: "";
+    display: inline-block;
+    width: 0.5em;
+}
+
+/* 确保字体加载 */
+@import url('https://fonts.cdnfonts.com/css/american-typewriter');
 </style>
         <div class="container_1 lazy-section">
           <div class="line">
