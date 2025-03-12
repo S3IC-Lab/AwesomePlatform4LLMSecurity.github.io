@@ -1116,8 +1116,16 @@ function createOverviewChart(overview, finished) {
         seriesIndex: 0,
         dataIndex: params.dataIndex
       });
-
+      
       currentIndex = params.dataIndex / 2;
+      detail_title.innerHTML = overview[currentIndex].name + " Module";
+      detail_title.style.borderColor = color[currentIndex];
+      finished_methods.innerHTML = finished[currentIndex].value + "/" + overview[currentIndex].value;
+      finished_methods.style.background = 'linear-gradient(to right, ' + tinycolor(color[currentIndex]).darken(10).toString() + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%, ' + color[currentIndex] + ' ' + (finished[currentIndex].value / overview[currentIndex].value * 100).toFixed(2) + '%)';
+      details_text.innerHTML = details_texts[currentIndex];
+      details.style.backgroundColor = light_color[currentIndex];
+      details.style.border = '2px solid ' + color[currentIndex];
+      detail_img.src = 'assets/img/' + category[currentIndex] + '.png';
     }
   });
 
@@ -1322,7 +1330,7 @@ function getFirstData(type = 'Fairness') {
       });
       if (results.res instanceof Array)
         if (results.res.length === 1)
-          document.getElementById(nowModule).innerHTML = results.res.map(item => `<img src="assets/img/res/${item}" style="width: 50%; height: auto; margin: 10px;">`).join('');
+          document.getElementById(nowModule).innerHTML = results.res.map(item => `<img src="assets/img/res/${item}" style="width: 50%; height: auto; margin: 10px 25%;">`).join('');
         else
           document.getElementById(nowModule).innerHTML = results.res.map(item => `<img src="assets/img/res/${item}" style="width: 30%; height: auto; margin: 10px;">`).join('');
       else{
