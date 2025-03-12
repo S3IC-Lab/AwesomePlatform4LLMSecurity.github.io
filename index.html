@@ -160,99 +160,81 @@
         <div class="row gy-10 my-4">
         <!DOCTYPE html>
     
-    <div class="content col-xl-12 d-flex" 
-         data-aos="fade-up" 
-         data-aos-delay="100" 
-         style="overflow: visible;">
-        
-        <p>
-            <span class="highlight">OmniTrust</span> is a comprehensive security platform designed to evaluate the trustworthiness of large language models (LLMs) and multimodal models. Supporting both white-box and black-box LLMs, OmniTrust offers an <span class="highlight">out-of-the-box toolkit</span> that is intuitive and easy to use—allowing developers and researchers to run complex security evaluations with a <span class="highlight">single line of code</span>.
-        </p>
+    <div class="content col-xl-12 d-flex flex-column" data-aos="fade-up" data-aos-delay="100" 
+     style="font-family: 'American Typewriter', monospace; line-height: 1.5;">
+    <p>
+        <span class="highlight">OmniTrust</span> is a comprehensive security platform designed to evaluate the trustworthiness of large language models (LLMs) and multimodal models. Supporting both white-box and black-box LLMs, OmniTrust offers an <span class="highlight">out-of-the-box toolkit</span> that is intuitive and easy to use—allowing developers and researchers to run complex security evaluations with a <span class="highlight">single line of code</span>.
+    </p>
 
-        <div class="persistent-section">
-            <p>At its core, OmniTrust comprises six powerful modules that cover key areas of model integrity and safety:</p>
-            
-            <ol class="module-list">
-                <li class="module-item">
-                    <span class="highlight">Safety Module</span>: Protects against a wide array of attack techniques, including AutoDAN, CipherChat, and more, enabling both attack and defense evaluation on LLMs and multimodal models.
-                </li>
-                <li class="module-item">
-                    <span class="highlight">Privacy Module</span>: Focuses on fine-tuned models to detect data extraction, membership inference, and prompt word stealing attacks, ensuring compliance with privacy standards.
-                </li>
-                <li class="module-item">
-                    <span class="highlight">Detectability Module</span>: Provides watermarking addition, detection, and evaluation, safeguarding against tampering and ensuring content integrity.
-                </li>
-                <li class="module-item">
-                    <span class="highlight">Truthfulness Module</span>: Evaluates knowledge consistency and reasoning accuracy across tasks such as Q&A, code generation, and cross-modal content generation, mitigating the risk of misinformation.
-                </li>
-                <li class="module-item">
-                    <span class="highlight">Fidelity Module</span>: Protects LLMs from prompt injection attacks, ensuring consistent and fair scoring mechanisms for judge-based tasks.
-                </li>
-                <li class="module-item">
-                    <span class="highlight">Fairness Module</span>: Analyzes and mitigates bias in LLMs, providing insights into potential issues such as egocentric or attentional bias, and offering solutions for effective calibration.
-                </li>
-            </ol>
-        </div>
-
-        <p>
-            OmniTrust comes with a <span class="highlight">wide range of datasets</span> tailored for each module, along with complete metrics to evaluate the overall trustworthiness of a model. The platform’s <span class="highlight">simplicity is key</span>: a single line of code allows users to run any module, choose models, load datasets, and generate detailed, actionable reports—making it a <span class="highlight">powerful and user-friendly solution</span> for securing and evaluating generative foundation models.
-        </p>
-        <style>
-        .content {
-            font-family: 'American Typewriter', monospace;
-            line-height: 1.5;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .highlight {
-            font-weight: bold;
-            background: linear-gradient(0deg, rgba(255,230,0,0.3) 50%, transparent 50%);
-            padding: 0 0.2em;
-            box-decoration-break: clone;
-        }
-
-        .persistent-section {
-            position: relative;
-            z-index: 1;
-            min-height: 80vh;
-            padding: 20px 0;
-            backface-visibility: hidden;
-            transform: translateZ(0);
-            will-change: transform;
-        }
-
-        ol.module-list {
-            counter-reset: module-counter;
-            padding-left: 2em;
-            margin: 0;
-        }
-
-        .module-item {
-            counter-increment: module-counter;
-            margin-bottom: 1em;
-            position: relative;
-        }
-
-        .module-item::before {
-            content: counter(module-counter) ". ";
-            position: absolute;
-            left: -2em;
-            width: 2em;
-            text-align: right;
-        }
-
-        /* 强制覆盖Bootstrap样式 */
-        .d-flex {
-            display: block !important;
-        }
-
-        [data-aos] {
-            transition-property: opacity !important;
-        }
-    </style>
+    < div class = " persistent-section " style = " position : relative ; z-index : 1 ; min-height : 80 vh ; padding : 20 px 0 ; " >
+        <p>At its core, OmniTrust comprises six powerful modules that cover key areas of model integrity and safety:</p>
+        < ol style = " counter-reset : module-counter ; padding-left : 2 em ; " >
+            <li class="module-item">
+                <span class="highlight">Safety Module</span>: Protects against a wide array of attack techniques, including AutoDAN, CipherChat, and more, enabling both attack and defense evaluation on LLMs and multimodal models.
+            </li>
+            <li class="module-item">
+                <span class="highlight">Privacy Module</span>: Focuses on fine-tuned models to detect data extraction, membership inference, and prompt word stealing attacks, ensuring compliance with privacy standards.
+            </li>
+            <li class="module-item">
+                <span class="highlight">Detectability Module</span>: Provides watermarking addition, detection, and evaluation, safeguarding against tampering and ensuring content integrity.
+            </li>
+            <li class="module-item">
+                <span class="highlight">Truthfulness Module</span>: Evaluates knowledge consistency and reasoning accuracy across tasks such as Q&A, code generation, and cross-modal content generation, mitigating the risk of misinformation.
+            </li>
+            <li class="module-item">
+                <span class="highlight">Fidelity Module</span>: Protects LLMs from prompt injection attacks, ensuring consistent and fair scoring mechanisms for judge-based tasks.
+            </li>
+            <li class="module-item">
+                <span class="highlight">Fairness Module</span>: Analyzes and mitigates bias in LLMs, providing insights into potential issues such as egocentric or attentional bias, and offering solutions for effective calibration.
+            </li>
+        </ol>
     </div>
+
+    <p>
+        OmniTrust comes with a <span class="highlight">wide range of datasets</span> tailored for each module, along with complete metrics to evaluate the overall trustworthiness of a model. The platform’s <span class="highlight">simplicity is key</span>: a single line of code allows users to run any module, choose models, load datasets, and generate detailed, actionable reports—making it a <span class="highlight">powerful and user-friendly solution</span> for securing and evaluating generative foundation models.
+    </p>
+</div>
+
+<style>
+    /* 修复滚动消失的关键CSS */ .persistent-section { backface-visibility : hidden ; transform : translateZ ( 0 ) ; will-change : transform ; }
+    .d-flex { display : block !important ; /* 覆盖flex布局 */ } /* 修复AOS动画冲突 */ 
+    [ data-aos ] { transition-property : opacity !important ; }
+.highlight {
+    font-weight: bold;
+    background: linear-gradient(0deg, rgba(255,230,0,0.3) 50%, transparent 50%);
+    padding: 0 0.2em;
+    margin: 0 -0.2em;
+    box-decoration-break: clone;
+}
+
+.strict-format {
+    margin: 1.5em 0;
+}
+
+.module-list {
+    list-style-type: none;
+    padding-left: 2em;
+    counter-reset: module-counter;
+}
+
+.module-item {
+    counter-increment: module-counter;
+    display: block;
+    margin-bottom: 0.75em;
+    line-height: 1.5;
+    position: relative;
+}
+
+.module-item::before {
+    content: counter(module-counter) ". ";
+    position: absolute;
+    left: -2em;
+    width: 2em;
+    text-align: right;
+}
+
+@import url('https://fonts.cdnfonts.com/css/american-typewriter');
+</style>
         <div class="container_1 lazy-section">
           <div class="line">
             <div id="overview" style="height: 260px;width: 300px;margin-top: 20px;"></div>
