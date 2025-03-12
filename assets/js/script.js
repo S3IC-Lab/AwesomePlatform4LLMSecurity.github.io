@@ -40,7 +40,7 @@ var select_data = [
     {id: 1, 
       name: 'Bias50', 
       model_id: 1, 
-      code: 'python llm_bias.py --evaluators deepseek-r1:70b --task order --dataset bias50', 
+      code: 'python llm_bias.py --task order --dataset bias50', 
       res: 
       `
       The result is:\n
@@ -65,7 +65,7 @@ var select_data = [
     {id: 2, 
       name: 'Bias50', 
       model_id: 2, 
-      code: 'python llm_bias.py --evaluators deepseek-r1:70b --task compassion --dataset bias50', 
+      code: 'python llm_bias.py --task compassion --dataset bias50', 
       res: 
       `
       The result is:\n
@@ -89,7 +89,7 @@ var select_data = [
     {id: 3, 
       name: 'Bias50', 
       model_id: 3, 
-      code: 'python llm_bias.py --evaluators deepseek-r1:70b --task selective --dataset bias50', 
+      code: 'python llm_bias.py --task selective --dataset bias50', 
       res: 
       `
       The result is:\n
@@ -109,7 +109,7 @@ var select_data = [
     {id: 4, 
       name: 'Bias50', 
       model_id: 4, 
-      code: 'python llm_bias.py --evaluators llama3.1:8b --task order --dataset bias50', 
+      code: 'python llm_bias.py --task order --dataset bias50', 
       res: 
       `
       The result is:\n
