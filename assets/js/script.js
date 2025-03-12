@@ -442,28 +442,28 @@ var select_data = [
 
       {id: 13, name: 'c4', model_id: 5, 
         code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--opt-1.3b/ --metric PPL", 
-        res: `Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
+        res: `The result is:\nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
       {id: 14, name: 'WMT16_de_en', model_id: 5, 
         code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--opt-1.3b/ --metric PPL", 
-        res: `Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
+        res: `The result is:\nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
       {id: 15, name: 'HumanEval', model_id: 5, 
         code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--opt-1.3b/ --metric PPL", 
-        res: `Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
+        res: `The result is:\nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
 
       {id: 16, name: 'c4', model_id: 6, 
         code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--llama-2-7B/ --metric PPL", 
-        res: `Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
+        res: `The result is:\nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
       {id: 17, name: 'WMT16_de_en', model_id: 6, 
         code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--llama-2-7B/ --metric PPL", 
-        res: `Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
+        res: `The result is:\nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
       {id: 18, name: 'HumanEval', model_id: 6, 
         code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--llama-2-7B/ --metric PPL", 
-        res: `Examples: \nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
+        res: `The result is:\nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
     
   ]],
@@ -485,30 +485,31 @@ var select_data = [
   ],[
     {id: 1, name: 'enron', model_id: 1, 
       code: 'python privacy.py --attack C_DEA --dataset enron', 
-      res: `{\nThe model is loaded successfully\nStart attack\nSetting pad_token_id to eos_token_id:50256 for open-end generation.\n'dataset': 'all', \n'model': 'test-output', \n'correct': 0.0, \n'correct_local': 10.0, \n'correct_domain': 0.0, \n'leak_rate': 3.33, \n'reject_rate': 0.0, \n'leak_rate_wo_reject': 3.33}\nProcess finished with exit code 0\n`},
+      res: `The result is:\nThe model is loaded successfully\nStart attack\nSetting pad_token_id to eos_token_id:50256 for open-end generation.\n'dataset': 'all', \n'model': 'test-output', \n'correct': 0.0, \n'correct_local': 10.0, \n'correct_domain': 0.0, \n'leak_rate': 3.33, \n'reject_rate': 0.0, \n'leak_rate_wo_reject': 3.33}\nProcess finished with exit code 0\n`},
 
     {id: 2, name: 'enron', model_id: 2, code: 'python privacy.py --attack C_DEA --dataset enron',
-      res: `{\nThe model is loaded successfully\nStart attack\nSetting pad_token_id to eos_token_id:50256 for open-end generation.\n'dataset': 'all', \n'model': 'test-output', \n'correct': 0.0, \n'correct_local': 10.0, \n'correct_domain': 0.0, \n'leak_rate': 3.33, \n'reject_rate': 0.0, \n'leak_rate_wo_reject': 3.33}\nProcess finished with exit code 0\n`},
+      res: `The result is:\nThe model is loaded successfully\nStart attack\nSetting pad_token_id to eos_token_id:50256 for open-end generation.\n'dataset': 'all', \n'model': 'test-output', \n'correct': 0.0, \n'correct_local': 10.0, \n'correct_domain': 0.0, \n'leak_rate': 3.33, \n'reject_rate': 0.0, \n'leak_rate_wo_reject': 3.33}\nProcess finished with exit code 0\n`},
     
     {id: 3, name: 'agnews', model_id: 3, 
       code: 'python privacy.py --attack C_DEA --dataset agnews', 
-      res: `Examples: \nThe model is loaded successfully\n0000.parquet\nLoaded 204017 entries from xsum dataset.\nSetting pad_token_id to eos_token_id:50256 for open-end generation.\nStart attack\nloss_type=None was set in the config but it is unrecognised.\nUsing the default loss: ForCausalLMLoss.\n{\n'dataset': 'all',\n 'model': 'test-output', \n'reject_rate': 0.0,\n 'average_similarity': np.float64(0.7156997561454773), \n'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]}\nProcess finished with exit code 0\n`},
+      res: `The result is:\nThe model is loaded successfully\n0000.parquet\nLoaded 204017 entries from xsum dataset.\nSetting pad_token_id to eos_token_id:50256 for open-end generation.\nStart attack\nloss_type=None was set in the config but it is unrecognised.\nUsing the default loss: ForCausalLMLoss.\n{\n'dataset': 'all',\n 'model': 'test-output', \n'reject_rate': 0.0,\n 'average_similarity': np.float64(0.7156997561454773), \n'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]}\nProcess finished with exit code 0\n`},
     
     {id: 4, name: 'xsum', model_id: 3, 
       code: 'python privacy.py --attack C_DEA --dataset xsum', 
-      res: `Examples: \nThe model is loaded successfully\n0000.parquet\nLoaded 204017 entries from xsum dataset.\nSetting pad_token_id to eos_token_id:50256 for open-end generation.\nStart attack\nloss_type=None was set in the config but it is unrecognised.\nUsing the default loss: ForCausalLMLoss.\n{\n'dataset': 'all',\n 'model': 'test-output', \n'reject_rate': 0.0,\n 'average_similarity': np.float64(0.7156997561454773), \n'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]}\nProcess finished with exit code 0\n`},
+      res: `The result is:\nThe model is loaded successfully\n0000.parquet\nLoaded 204017 entries from xsum dataset.\nSetting pad_token_id to eos_token_id:50256 for open-end generation.\nStart attack\nloss_type=None was set in the config but it is unrecognised.\nUsing the default loss: ForCausalLMLoss.\n{\n'dataset': 'all',\n 'model': 'test-output', \n'reject_rate': 0.0,\n 'average_similarity': np.float64(0.7156997561454773), \n'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]}\nProcess finished with exit code 0\n`},
     
     {id: 5, name: 'agnews', model_id: 4, 
       code: 'python privacy.py --attack C_DEA --dataset agnews', 
-      res: `Examples: \nThe model is loaded successfully\n0000.parquet\nLoaded 204017 entries from xsum dataset.\nSetting pad_token_id to eos_token_id:50256 for open-end generation.\nStart attack\nloss_type=None was set in the config but it is unrecognised.\nUsing the default loss: ForCausalLMLoss.\n{\n'dataset': 'all',\n 'model': 'test-output', \n'reject_rate': 0.0,\n 'average_similarity': np.float64(0.7156997561454773), \n'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]}\nProcess finished with exit code 0\n`},
+      res: `The result is:\nThe model is loaded successfully\n0000.parquet\nLoaded 204017 entries from xsum dataset.\nSetting pad_token_id to eos_token_id:50256 for open-end generation.\nStart attack\nloss_type=None was set in the config but it is unrecognised.\nUsing the default loss: ForCausalLMLoss.\n{\n'dataset': 'all',\n 'model': 'test-output', \n'reject_rate': 0.0,\n 'average_similarity': np.float64(0.7156997561454773), \n'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]}\nProcess finished with exit code 0\n`},
     
     {id: 6, name: 'xsum', model_id: 4, 
       code: 'python privacy.py --attack C_DEA --dataset xsum', 
-      res: `Examples: \nThe model is loaded successfully\n0000.parquet\nLoaded 204017 entries from xsum dataset.\nSetting pad_token_id to eos_token_id:50256 for open-end generation.\nStart attack\nloss_type=None was set in the config but it is unrecognised.\nUsing the default loss: ForCausalLMLoss.\n{\n'dataset': 'all',\n 'model': 'test-output', \n'reject_rate': 0.0,\n 'average_similarity': np.float64(0.7156997561454773), \n'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]}\nProcess finished with exit code 0\n`},
+      res: `The result is:\nThe model is loaded successfully\n0000.parquet\nLoaded 204017 entries from xsum dataset.\nSetting pad_token_id to eos_token_id:50256 for open-end generation.\nStart attack\nloss_type=None was set in the config but it is unrecognised.\nUsing the default loss: ForCausalLMLoss.\n{\n'dataset': 'all',\n 'model': 'test-output', \n'reject_rate': 0.0,\n 'average_similarity': np.float64(0.7156997561454773), \n'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]}\nProcess finished with exit code 0\n`},
     
     {id: 7, name: 'no-data', model_id: 5, 
       code: 'python privacy.py --attack U_DEA', 
-      res: `======== top sample by XL perplexity: ========\n
+      res: `The result is:\n
+      ======== top sample by XL perplexity: ========\n
       PPL=5.333, , score=-1.674\n
       ('U.S. Rep. Debbie Wasserman Schultz, who worked on a campaign for former '\n
       'House Minority Leader Nancy Pelosi, has confirmed Tuesday that she helped '\n
@@ -538,7 +539,8 @@ var select_data = [
 
     {id: 8, name: 'no-data', model_id: 6, 
       code: 'python privacy.py --attack U_DEA', 
-      res: `======== top sample by XL perplexity: ========\n
+      res: `The result is:\n
+      ======== top sample by XL perplexity: ========\n
       PPL=5.333, , score=-1.674\n
       ('U.S. Rep. Debbie Wasserman Schultz, who worked on a campaign for former '\n
       'House Minority Leader Nancy Pelosi, has confirmed Tuesday that she helped '\n
@@ -568,7 +570,8 @@ var select_data = [
 
     {id: 9, name: 'agnews', model_id: 7, 
       code: "python privacy.py --attack MIA --metric LOSS # ['LOSS', 'PPL']", 
-      res: `Loaded 204017 entries from xsum dataset.\n
+      res: `The result is:\n
+      Loaded 204017 entries from xsum dataset.\n
       0000.parquet\n
       Start attack\n
       loss_type=None was set in the config but it is unrecognised.Using the default loss: ForCausalLMLoss.\n
@@ -579,7 +582,8 @@ var select_data = [
 
     {id: 10, name: 'xsum', model_id: 7, 
       code: "python privacy.py --attack MIA --metric LOSS # ['LOSS', 'PPL']", 
-      res: `Loaded 204017 entries from xsum dataset.\n
+      res: `The result is:\n
+      Loaded 204017 entries from xsum dataset.\n
       0000.parquet\n
       Start attack\n
       loss_type=None was set in the config but it is unrecognised.Using the default loss: ForCausalLMLoss.\n
@@ -590,7 +594,8 @@ var select_data = [
 
     {id: 11, name: 'wikitext-103-v1', model_id: 7, 
       code: "python privacy.py --attack MIA --metric LOSS # ['LOSS', 'PPL']", 
-      res: `Loaded 204017 entries from xsum dataset.\n
+      res: `The result is:\n
+      Loaded 204017 entries from xsum dataset.\n
       0000.parquet\n
       Start attack\n
       loss_type=None was set in the config but it is unrecognised.Using the default loss: ForCausalLMLoss.\n
@@ -601,7 +606,8 @@ var select_data = [
 
     {id: 12, name: 'wikitext-2-v1', model_id: 7, 
       code: "python privacy.py --attack MIA --metric LOSS # ['LOSS', 'PPL']", 
-      res: `Loaded 204017 entries from xsum dataset.\n
+      res: `The result is:\n
+      Loaded 204017 entries from xsum dataset.\n
       0000.parquet\n
       Start attack\n
       loss_type=None was set in the config but it is unrecognised.Using the default loss: ForCausalLMLoss.\n
@@ -612,7 +618,8 @@ var select_data = [
 
     {id: 13, name: 'agnews', model_id: 8, 
       code: "python privacy.py --attack MIA --metric LOSS # ['LOSS', 'PPL']", 
-      res: `Loaded 204017 entries from xsum dataset.\n
+      res: `The result is:\n
+      Loaded 204017 entries from xsum dataset.\n
       0000.parquet\n
       Start attack\n
       loss_type=None was set in the config but it is unrecognised.Using the default loss: ForCausalLMLoss.\n
@@ -623,7 +630,8 @@ var select_data = [
 
     {id: 14, name: 'xsum', model_id: 8, 
       code: "python privacy.py --attack MIA --metric LOSS # ['LOSS', 'PPL']", 
-      res: `Loaded 204017 entries from xsum dataset.\n
+      res: `The result is:\n
+      Loaded 204017 entries from xsum dataset.\n
       0000.parquet\n
       Start attack\n
       loss_type=None was set in the config but it is unrecognised.Using the default loss: ForCausalLMLoss.\n
@@ -634,7 +642,8 @@ var select_data = [
 
     {id: 15, name: 'wikitext-103-v1', model_id: 8, 
       code: "python privacy.py --attack MIA --metric LOSS # ['LOSS', 'PPL']", 
-      res: `Loaded 204017 entries from xsum dataset.\n
+      res: `The result is:\n
+      Loaded 204017 entries from xsum dataset.\n
       0000.parquet\n
       Start attack\n
       loss_type=None was set in the config but it is unrecognised.Using the default loss: ForCausalLMLoss.\n
@@ -645,7 +654,8 @@ var select_data = [
 
     {id: 16, name: 'wikitext-2-v1', model_id: 8, 
       code: "python privacy.py --attack MIA --metric LOSS # ['LOSS', 'PPL']", 
-      res: `Loaded 204017 entries from xsum dataset.\n
+      res: `The result is:\n
+      Loaded 204017 entries from xsum dataset.\n
       0000.parquet\n
       Start attack\n
       loss_type=None was set in the config but it is unrecognised.Using the default loss: ForCausalLMLoss.\n
