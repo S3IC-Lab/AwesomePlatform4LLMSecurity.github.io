@@ -390,7 +390,7 @@ var select_data = [
   ],[
     {id: 1, name: 'c4', model_id: 1, 
       code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--opt-1.3b/ --visualize_or_not True', 
-      res: ["Detectability-add-1.png"]},
+      res: ["Detectability-add-1.png","Detectability-add-2.png"]},
 
     {id: 2, name: 'WMT16_de_en', model_id: 1, 
       code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--opt-1.3b/ --visualize_or_not True', 
