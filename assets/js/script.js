@@ -389,7 +389,7 @@ var select_data = [
     
     ],[
       {id: 1, name: 'c4', model_id: 1, 
-        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/model/facebook--opt-1.3b --visualize_or_not True', 
+        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/model/opt-1.3b --visualize_or_not True', 
         res: `The watermarked text:\n
           Cluster comprises IBM's Opteron-based eServer 325 server and systems management software and storage devices that can run Linux and Windows operating systems.\n
           IBM's servers can run Linux, Solaris, Windows and OS X, among others, each one with a new operating system capability, Watson says. It can handle databases but it's specifically designed to do machine learning research.\n
