@@ -389,7 +389,7 @@ var select_data = [
     
     ],[
       {id: 1, name: 'c4', model_id: 1, 
-        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--opt-1.3b/ --visualize_or_not True', 
+        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/model/facebook--opt-1.3b --visualize_or_not True', 
         res: `The watermarked text:\n
           Cluster comprises IBM's Opteron-based eServer 325 server and systems management software and storage devices that can run Linux and Windows operating systems.\n
           IBM's servers can run Linux, Solaris, Windows and OS X, among others, each one with a new operating system capability, Watson says. It can handle databases but it's specifically designed to do machine learning research.\n
@@ -402,23 +402,23 @@ var select_data = [
       },
 
       {id: 2, name: 'WMT16_de_en', model_id: 1, 
-        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--opt-1.3b/ --visualize_or_not True', 
+        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/models/facebook--opt-1.3b/ --visualize_or_not True', 
         res: ["Detectability-add-2.png"]},
 
       {id: 3, name: 'HumanEval', model_id: 1, 
-        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--opt-1.3b/ --visualize_or_not True', 
+        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/models/facebook--opt-1.3b/ --visualize_or_not True', 
         res: ["Detectability-add-1.png"]},
 
       {id: 4, name: 'c4', model_id: 2, 
-        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--llama-2-7B/ --visualize_or_not True', 
+        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home//models--facebook--llama-2-7B/ --visualize_or_not True', 
         res: ["Detectability-add-2.png"]},
 
       {id: 5, name: 'WMT16_de_en', model_id: 2, 
-        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--llama-2-7B/ --visualize_or_not True', 
+        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home//models--facebook--llama-2-7B/ --visualize_or_not True', 
         res: ["Detectability-add-1.png"]},
 
       {id: 6, name: 'HumanEval', model_id: 2, 
-        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home/.cache/huggingface/hub/models--facebook--llama-2-7B/ --visualize_or_not True', 
+        code: 'python watermark.py --task add_watermark --algorithm KGW --model-path /home//models--facebook--llama-2-7B/ --visualize_or_not True', 
         res: ["Detectability-add-2.png"]},
 
       {id: 7, name: 'c4', model_id: 3, 
@@ -450,28 +450,28 @@ var select_data = [
 
 
         {id: 13, name: 'c4', model_id: 5, 
-          code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--opt-1.3b/ --metric PPL", 
+          code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng//models--facebook--opt-1.3b/ --metric PPL", 
           res: `The result is:\nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
         {id: 14, name: 'WMT16_de_en', model_id: 5, 
-          code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--opt-1.3b/ --metric PPL", 
+          code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng//models--facebook--opt-1.3b/ --metric PPL", 
           res: `The result is:\nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
         {id: 15, name: 'HumanEval', model_id: 5, 
-          code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--opt-1.3b/ --metric PPL", 
+          code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng//models--facebook--opt-1.3b/ --metric PPL", 
           res: `The result is:\nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
 
         {id: 16, name: 'c4', model_id: 6, 
-          code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--llama-2-7B/ --metric PPL", 
+          code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng//models--facebook--llama-2-7B/ --metric PPL", 
           res: `The result is:\nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
         {id: 17, name: 'WMT16_de_en', model_id: 6, 
-          code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--llama-2-7B/ --metric PPL", 
+          code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng//models--facebook--llama-2-7B/ --metric PPL", 
           res: `The result is:\nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
         {id: 18, name: 'HumanEval', model_id: 6, 
-          code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng/.cache/huggingface/hub/models--facebook--llama-2-7B/ --metric PPL", 
+          code: "python watermark.py --task evaluate --algorithm KGW --model-path /home/licheng//models--facebook--llama-2-7B/ --metric PPL", 
           res: `The result is:\nPPL:  {'watermarked': 14.770383577346802, 'unwatermarked': 15.505741527080536}\n`},
 
       
