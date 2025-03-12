@@ -28,16 +28,19 @@ var select_data = [
   [[
     { id: 1, name: 'Order Bias' },
     { id: 2, name: 'Compassion Bias' },
-    { id: 3, name: 'Egocentric Bias' },
+    { id: 3, name: 'Selection Bias' },
   ],[
     {id: 1, name: 'Deepseek-r1:70b', method_id: 1},
     {id: 2, name: 'Deepseek-r1:70b', method_id: 2},
     {id: 3, name: 'Deepseek-r1:70b', method_id: 3},
+    {id: 4, name: 'llama3.1: 8b', method_id: 1},
+    {id: 5, name: 'llama3.1: 8b', method_id: 2},
+    {id: 6, name: 'llama3.1: 8b', method_id: 3},
   ],[
     {id: 1, 
       name: 'Bias50', 
       model_id: 1, 
-      code: 'python llm_bias.py --task order', 
+      code: 'python llm_bias.py --evaluators deepseek-r1:70b --task order --dataset bias50', 
       res: 
       `Examples: \n
       Evaluator: deepseek-r1:70b\n
@@ -47,37 +50,125 @@ var select_data = [
       Valid response percentage: 91.14%\n
       Valid responses: 957\n
       Consistency percentage: 86.29%\n
-      Consistency count: 906\n`
+      Consistency count: 906\n
+      -----\n
+      Evaluator: 评估所使用的模型。\n
+      First order percentage: 模型选择第一位次回复为最优回复的概率，反映其 First Order Bias 的程度。\n
+      Last order percentage: 模型选择最后位次回复为最优回复的概率，反映其 Last Order Bias 的程度。\n
+      Valid response percentage: 被判定为有效回答的比例，反映模型生成的回答是否符合评估标准。\n  
+      Valid responses: 模型生成的有效回答数量。\n  
+      Consistency percentage: 在重复评估相同任务时，模型保持一致回答的概率。\n  
+      Consistency count: 模型在所有评估任务中保持一致回答的次数。\n`
     },
 
     {id: 2, 
       name: 'Bias50', 
       model_id: 2, 
-      code: 'python examples/llm_bias.py --task compassion', 
+      code: 'python llm_bias.py --evaluators deepseek-r1:70b --task compassion --dataset bias50', 
       res: 
       `Examples: \n
       Evaluator: deepseek-r1:70b\n
       First order percentage: 37.14%\n
       Last order percentage: 37.14%\n
-      Me bias: 0.00\n
       Valid response percentage: 86.67%\n
       Valid responses: 91\n
       Consistency percentage: 83.81%\n
-      Consistency count: 88\n`
+      Consistency count: 88\n
+      -----\n
+      Evaluator: 评估所使用的模型。\n
+      First order percentage: 模型选择第一位次回复为最优回复的概率，反映其在 Compassion Bias 测试中对不同名称的倾向性。\n
+      Last order percentage: 模型选择最后位次回复为最优回复的概率，反映其在 Compassion Bias 测试中对不同名称的倾向性。\n
+      Valid response percentage: 被判定为有效回答的比例，衡量模型在 Compassion Bias 测试中的回答质量。\n
+      Valid responses: 模型在测试中生成的有效回答数量。\n
+      Consistency percentage: 在重复 Compassion Bias 评估任务时，模型保持一致回答的概率。\n
+      Consistency count: 模型在 Compassion Bias 测试中保持一致回答的次数。\n`
     },
       
     {id: 3, 
       name: 'Bias50', 
       model_id: 3, 
-      code: 'python examples/llm_bias.py --task selective', 
+      code: 'python llm_bias.py --evaluators deepseek-r1:70b --task selective --dataset bias50', 
       res: 
       `Examples: \n
       Evaluator: deepseek-r1:70b\n
       Selection bias percentage: 60.00%\n
       Selection bias count: 63\n
       Valid response percentage: 75.24%\n
-      Valid responses: 79\n`
+      Valid responses: 79\n
+       -----\n
+      Evaluator: 评估所使用的模型。\n
+      Selection bias percentage: 模型在测试中表现出选择偏差的概率，即模型在相同条件下更倾向于选择某类回复的程度。\n
+      Selection bias count: 模型在测试中被判定为存在选择偏差的回答次数。\n
+      Valid response percentage: 被判定为有效回答的比例，衡量模型在 Selection Bias 测试中的回答质量。\n
+      Valid responses: 模型在测试中生成的有效回答数量。\n`
     },
+
+    {id: 4, 
+      name: 'Bias50', 
+      model_id: 4, 
+      code: 'python llm_bias.py --evaluators llama3.1:8b --task order --dataset bias50', 
+      res: 
+      `Examples: \n
+      Evaluator: llama3.1:8b\n
+      First order percentage: 38.08%\n
+      Last order percentage: 1.03%\n
+      Valid response percentage: 84.76%\n
+      Valid responses: 4450\n
+      Consistency percentage: 71.47%\n
+      Consistency count: 3752\n
+       -----\n
+      Evaluator: 评估所使用的模型。 \n 
+      First order percentage: 模型选择第一位次回复为最优回复的概率，反映其 First Order Bias 的程度。\n
+      Last order percentage: 模型选择最后位次回复为最优回复的概率，反映其 Last Order Bias 的程度。\n
+      Valid response percentage: 被判定为有效回答的比例，反映模型生成的回答是否符合评估标准。 \n 
+      Valid responses: 模型生成的有效回答数量。  \n
+      Consistency percentage: 在重复评估相同任务时，模型保持一致回答的概率。  \n
+      Consistency count: 模型在所有评估任务中保持一致回答的次数。\n`
+    },
+
+    {id: 5, 
+      name: 'Bias50', 
+      model_id: 5, 
+      code: 'python llm_bias.py --evaluators llama3.1:8b --task compassion --dataset bias50', 
+      res: 
+      `Examples: \n
+      Evaluator: llama3.1:8b\n
+      First order percentage: 8.67%\n
+      Last order percentage: 4.29%\n
+      Valid response percentage: 60.76%\n
+      Valid responses: 638\n
+      Consistency percentage: 35.90%\n
+      Consistency count: 377\n
+      -----\n
+      Evaluator: 评估所使用的模型。\n
+      First order percentage: 模型选择第一位次回复为最优回复的概率，反映其在 Compassion Bias 测试中对不同名称的倾向性。\n
+      Last order percentage: 模型选择最后位次回复为最优回复的概率，反映其在 Compassion Bias 测试中对不同名称的倾向性。\n
+      Valid response percentage: 被判定为有效回答的比例，衡量模型在 Compassion Bias 测试中的回答质量。\n
+      Valid responses: 模型在测试中生成的有效回答数量。\n
+      Consistency percentage: 在重复 Compassion Bias 评估任务时，模型保持一致回答的概率。\n
+      Consistency count: 模型在 Compassion Bias 测试中保持一致回答的次数。\n`
+    },
+
+    {id: 6, 
+      name: 'Bias50', 
+      model_id: 6, 
+      code: 'python llm_bias.py --evaluators llama3.1:8b --task selective --dataset bias50', 
+      res: 
+      `Examples: \n
+      Evaluator: llama3.1:8b\n
+      Selective bias percentage: 53.90%\n
+      Selective count: 2830\n
+      Valid response percentage: 94.13%\n
+      Valid responses: 4942\n
+       -----\n
+      Evaluator: 评估所使用的模型。\n
+      Selection bias percentage: 模型在测试中表现出选择偏差的概率，即模型在相同条件下更倾向于选择某类回复的程度。\n
+      Selection bias count: 模型在测试中被判定为存在选择偏差的回答次数。\n
+      Valid response percentage: 被判定为有效回答的比例，衡量模型在 Selection Bias 测试中的回答质量。\n
+      Valid responses: 模型在测试中生成的有效回答数量。\n`
+    },
+
+   
 
   ]],
   // Truthfulness
