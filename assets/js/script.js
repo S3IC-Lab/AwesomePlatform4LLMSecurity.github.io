@@ -1399,7 +1399,7 @@ function addDataDataset(modelId) {
   select_dataset.innerHTML = html;
 }
 
-function getFirstData(type = 'Fairness') {
+function getFirstData(type = 'Truthfulness') {
   arr_method = select_data[category.indexOf(type)][0];
   arr_model = select_data[category.indexOf(type)][1];
   arr_dataset = select_data[category.indexOf(type)][2];
@@ -1428,7 +1428,7 @@ function getFirstData(type = 'Fairness') {
       });
       if (results.res instanceof Array)
         if (results.res.length === 1)
-          document.getElementById(nowModule).innerHTML = results.res.map(item => `<img src="assets/img/res/${item}" style="width: 50%; height: auto; margin: 10px 25%;">`).join('');
+          document.getElementById(nowModule).innerHTML = results.res.map(item => `<img src="assets/img/res/${item}" style="width: auto; height: 470px">`).join('');
         else
           document.getElementById(nowModule).innerHTML = results.res.map(item => `<img src="assets/img/res/${item}" style="width: 30%; height: auto; margin: 10px;">`).join('');
       else{
@@ -1437,8 +1437,8 @@ function getFirstData(type = 'Fairness') {
       }
       document.getElementById('code').innerHTML = results.code
       document.getElementById('run').addEventListener("click",function(){
-        // window.location.href = "https://www.baidu.com"
-        window.location.href = "http://121.248.54.196:5000/?code=" + results.code;
+        // window.location.href = "http://121.248.54.196:5000/?code=" + results.code;
+        window.open("http://121.248.54.196:5000/?code=" + results.code);
       })
   };
 
@@ -1464,7 +1464,7 @@ function createTabs() {
               div.style.display = 'none';
           });
           let div = document.querySelector(targetId);
-          div.style.display = 'block';
+          div.style.display = 'flex';
           nowModule = targetId.substring(1);
           div.childNodes.forEach(child => {
             if (child.nodeType === 1) {
@@ -1474,9 +1474,10 @@ function createTabs() {
           div.style.backgroundColor = light_color[category.indexOf(targetId.substring(1))];
           // document.querySelector(".container_2 .select_container").style.backgroundColor = light_color[category.indexOf(targetId.substring(1))];
           getFirstData(targetId.substring(1));
+          document.getElementById('code').innerHTML='';
       });
     });
-    document.querySelector('.tab a[href="#Fairness"]').click();
+    document.querySelector('.tab a[href="#Truthfulness"]').click();
 }
 
 document.addEventListener("DOMContentLoaded", function() {
