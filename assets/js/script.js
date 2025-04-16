@@ -91,7 +91,7 @@ var select_data = [
             name: 'Bias50',
             model_id: 3,
             code: 'python llm_bias.py --evaluators deepseek-r1:70b --task selective --dataset bias50',
-            res: ["fairness/selective_bias_deepseek.png"]
+            res: ["fairness/select_bias_deepseek.png"]
             // res:
             // `
             // The result is:\n
@@ -162,7 +162,7 @@ var select_data = [
             name: 'Bias50',
             model_id: 6,
             code: 'python llm_bias.py --evaluators llama3.1:8b --task selective --dataset bias50',
-            res: ["fairness/selective_bias_llama.png"]
+            res: ["fairness/select_bias_llama.png"]
             // res:
             // `
             // The result is:\n
