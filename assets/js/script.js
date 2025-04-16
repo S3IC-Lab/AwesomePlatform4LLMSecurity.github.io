@@ -964,7 +964,7 @@ var select_data = [
       'leak_rate': 3.33, \n
       'reject_rate': 0.0, \n
       'leak_rate_wo_reject': 3.33\n
-      The meaning of the results:
+      \nThe meaning of the results:
       correct : The accuracy of email address prediction
       correct_local : The accuracy of the prediction of the local part of the email address
       correct_domain : The accuracy of the prediction of the email address domain name section
@@ -980,7 +980,7 @@ var select_data = [
       'leak_rate': 3.33, \n
       'reject_rate': 0.0, \n
       'leak_rate_wo_reject': 3.33\n
-      The meaning of the results:
+      \nThe meaning of the results:
       correct : The accuracy of email address prediction
       correct_local : The accuracy of the prediction of the local part of the email address
       correct_domain : The accuracy of the prediction of the email address domain name section
@@ -993,7 +993,7 @@ var select_data = [
       res: `'reject_rate': 0.0,\n
        'average_similarity': np.float64(0.7156997561454773), \n
        'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]\n
-       The meaning of the results:
+       \nThe meaning of the results:
        reject_rate : Rejection response rate
         average_similarity : The similarity of the generated answers to the dataset
         top_likelihood : The highest ten likelihoods`
@@ -1005,7 +1005,7 @@ var select_data = [
       'reject_rate': 0.0,\n
        'average_similarity': np.float64(0.7156997561454773), \n
        'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]\n
-       The meaning of the results:
+       \nThe meaning of the results:
        reject_rate : Rejection response rate
         average_similarity : The similarity of the generated answers to the dataset
         top_likelihood : The highest ten likelihoods`
@@ -1018,7 +1018,7 @@ var select_data = [
        'average_similarity': np.float64(0.7156997561454773), \n
        'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]\n
        }\n
-       The meaning of the results:
+       \nThe meaning of the results:
        reject_rate : Rejection response rate
         average_similarity : The similarity of the generated answers to the dataset
         top_likelihood : The highest ten likelihoods`
@@ -1030,7 +1030,7 @@ var select_data = [
       'reject_rate': 0.0,\n
        'average_similarity': np.float64(0.7156997561454773), \n
        'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]\n
-       The meaning of the results:
+       \nThe meaning of the results:
        reject_rate : Rejection response rate
         average_similarity : The similarity of the generated answers to the dataset
         top_likelihood : The highest ten likelihoods`
@@ -1104,7 +1104,7 @@ var select_data = [
       Train avg score: 2.9231802463531493\n
       Test avg score: 3.029422402381897\n
       'ACC': 0.55, 'AUC': 0.7, 'TPR@0.1% FPR': 0.3
-      The meaning of the results:
+      \nThe meaning of the results:
       ASR : Accuracy Rate
       AUC : Area Under the Curve
       TPR@0.1% FPR : True Positive Rate at 0.1% False Positive Rate`},
@@ -1119,7 +1119,7 @@ var select_data = [
       Train avg score: 2.9231802463531493\n
       Test avg score: 3.029422402381897\n
       'ACC': 0.55, 'AUC': 0.7, 'TPR@0.1% FPR': 0.3
-      The meaning of the results:
+      \nThe meaning of the results:
       ASR : Accuracy Rate
       AUC : Area Under the Curve
       TPR@0.1% FPR : True Positive Rate at 0.1% False Positive Rate`},
@@ -1130,7 +1130,7 @@ var select_data = [
       Train avg score: 2.9231802463531493\n
       Test avg score: 3.029422402381897\n
       acc': 0.55, 'auc': np.float64(0.7), 'TPR@0.1%FPR': np.float64(0.3)}\n
-      The meaning of the results:
+      \nThe meaning of the results:
       ASR : Accuracy Rate
       AUC : Area Under the Curve
       TPR@0.1% FPR : True Positive Rate at 0.1% False Positive Rate`},
