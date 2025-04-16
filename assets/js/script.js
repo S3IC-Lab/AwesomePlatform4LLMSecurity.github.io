@@ -902,7 +902,7 @@ var select_data = [
       Test avg score: 3.029422402381897\n
       'ACC': 0.55, 'AUC': 0.7, 'TPR@0.1% FPR': 0.3
       \nThe meaning of the results:
-      ASR : Accuracy Rate
+      ACC : Accuracy Rate
       AUC : Area Under the Curve
       TPR@0.1% FPR : True Positive Rate at 0.1% False Positive Rate`
         },
@@ -919,7 +919,7 @@ var select_data = [
       Test avg score: 3.029422402381897\n
       'ACC': 0.55, 'AUC': 0.7, 'TPR@0.1% FPR': 0.3
       \nThe meaning of the results:
-      ASR : Accuracy Rate
+      ACC : Accuracy Rate
       AUC : Area Under the Curve
       TPR@0.1% FPR : True Positive Rate at 0.1% False Positive Rate`
         },
@@ -932,7 +932,7 @@ var select_data = [
       Test avg score: 3.029422402381897\n
       acc': 0.55, 'auc': np.float64(0.7), 'TPR@0.1%FPR': np.float64(0.3)}\n
       \nThe meaning of the results:
-      ASR : Accuracy Rate
+      ACC : Accuracy Rate
       AUC : Area Under the Curve
       TPR@0.1% FPR : True Positive Rate at 0.1% False Positive Rate`
         },
@@ -945,7 +945,10 @@ var select_data = [
       Test avg score: 3.029422402381897\n
       acc': 0.55, 'auc': np.float64(0.7), 'TPR@0.1%FPR': np.float64(0.3)}\n
       loss_type=None was set in the config but it is unrecognised.Using the default loss: ForCausalLMLoss.\n
-      `
+      \nThe meaning of the results:
+      ACC : Accuracy Rate
+      AUC : Area Under the Curve
+      TPR@0.1% FPR : True Positive Rate at 0.1% False Positive Rate`
         },
 
         {
@@ -954,7 +957,11 @@ var select_data = [
             res: `The result is:\n
       Train avg score: 2.9231802463531493\n
       Test avg score: 3.029422402381897\n
-      'acc': 0.55, 'auc': np.float64(0.7), 'TPR@0.1%FPR': np.float64(0.3)}\n`
+      'acc': 0.55, 'auc': np.float64(0.7), 'TPR@0.1%FPR': np.float64(0.3)}\n
+      \nThe meaning of the results:
+      ACC : Accuracy Rate
+      AUC : Area Under the Curve
+      TPR@0.1% FPR : True Positive Rate at 0.1% False Positive Rate`
         },
 
         {
@@ -963,7 +970,11 @@ var select_data = [
             res: `The result is:\n
       Train avg score: 2.9231802463531493\n
       Test avg score: 3.029422402381897\n
-      'acc': 0.55, 'auc': np.float64(0.7), 'TPR@0.1%FPR': np.float64(0.3)}\n`
+      'acc': 0.55, 'auc': np.float64(0.7), 'TPR@0.1%FPR': np.float64(0.3)}\n
+      \nThe meaning of the results:
+      ACC : Accuracy Rate
+      AUC : Area Under the Curve
+      TPR@0.1% FPR : True Positive Rate at 0.1% False Positive Rate`
         },
 
         {
@@ -972,7 +983,15 @@ var select_data = [
             res: `The result is:\n
       Train avg score: 2.9231802463531493\n
       Test avg score: 3.029422402381897\n
-      'acc': 0.55, 'auc': np.float64(0.7), 'TPR@0.1%FPR': np.float64(0.3)}\n`
+      'acc': 0.55, 'auc': np.float64(0.7), 'TPR@0.1%FPR': np.float64(0.3)}\n
+      \nThe meaning of the results:
+      ACC : Accuracy Rate
+      AUC : Area Under the Curve
+      TPR@0.1% FPR : True Positive Rate at 0.1% False Positive Rate、
+      \nThe meaning of the results:
+      ACC : Accuracy Rate
+      AUC : Area Under the Curve
+      TPR@0.1% FPR : True Positive Rate at 0.1% False Positive Rate`
         },
 
         {
@@ -981,7 +1000,11 @@ var select_data = [
             res: `The result is:\n
       Train avg score: 2.9231802463531493\n
       Test avg score: 3.029422402381897\n
-      'acc': 0.55, 'auc': np.float64(0.7), 'TPR@0.1%FPR': np.float64(0.3)}\n`
+      'acc': 0.55, 'auc': np.float64(0.7), 'TPR@0.1%FPR': np.float64(0.3)}\n
+      \nThe meaning of the results:
+      ACC : Accuracy Rate
+      AUC : Area Under the Curve
+      TPR@0.1% FPR : True Positive Rate at 0.1% False Positive Rate`
         },
     ]],
     // Safety
