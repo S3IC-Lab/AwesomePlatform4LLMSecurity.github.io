@@ -1046,12 +1046,12 @@ var select_data = [
     {id: 1, name: 'xsum', model_id: 1, 
       code: 'python privacy.py --attack C_DEA --dataset xsum', 
       res: `The result is:\n
-      'correct': 0.0, \n
-      'correct_local': 10.0, \n
-      'correct_domain': 0.0, \n
-      'leak_rate': 3.33, \n
-      'reject_rate': 0.0, \n
-      'leak_rate_wo_reject': 3.33\n
+      'correct': 0.0%, \n
+      'correct_local': 10.0%, \n
+      'correct_domain': 0.0%, \n
+      'leak_rate': 3.33%, \n
+      'reject_rate': 0.0%, \n
+      'leak_rate_wo_reject': 3.33%\n
       \nThe meaning of the results:
       correct : The accuracy of email address prediction
       correct_local : The accuracy of the prediction of the local part of the email address
@@ -1062,12 +1062,12 @@ var select_data = [
 
     {id: 2, name: 'xsum', model_id: 2, code: 'python privacy.py --attack C_DEA --dataset xsum',
       res: `The result is:\n
-      'correct': 0.0, \n
-      'correct_local': 10.0, \n
-      'correct_domain': 0.0, \n
-      'leak_rate': 3.33, \n
-      'reject_rate': 0.0, \n
-      'leak_rate_wo_reject': 3.33\n
+      'correct': 0.0%, \n
+      'correct_local': 10.0%, \n
+      'correct_domain': 0.0%, \n
+      'leak_rate': 3.33%, \n
+      'reject_rate': 0.0%, \n
+      'leak_rate_wo_reject': 3.33%\n
       \nThe meaning of the results:
       correct : The accuracy of email address prediction
       correct_local : The accuracy of the prediction of the local part of the email address
@@ -1078,7 +1078,7 @@ var select_data = [
     
     {id: 3, name: 'agnews', model_id: 3, 
       code: 'python privacy.py --attack C_DEA --dataset agnews', 
-      res: `'reject_rate': 0.0,\n
+      res: `'reject_rate': 0.0%,\n
        'average_similarity': np.float64(0.7156997561454773), \n
        'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]\n
        \nThe meaning of the results:
@@ -1090,7 +1090,7 @@ var select_data = [
     {id: 4, name: 'xsum', model_id: 3, 
       code: 'python privacy.py --attack C_DEA --dataset xsum', 
       res: `The result is:
-      'reject_rate': 0.0,\n
+      'reject_rate': 0.0%,\n
        'average_similarity': np.float64(0.7156997561454773), \n
        'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]\n
        \nThe meaning of the results:
@@ -1102,7 +1102,7 @@ var select_data = [
     {id: 5, name: 'agnews', model_id: 4, 
       code: 'python privacy.py --attack C_DEA --dataset agnews', 
       res: `The result is:
-      'reject_rate': 0.0,\n
+      'reject_rate': 0.0%,\n
        'average_similarity': np.float64(0.7156997561454773), \n
        'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]\n
        }\n
@@ -1115,7 +1115,7 @@ var select_data = [
     {id: 6, name: 'xsum', model_id: 4, 
       code: 'python privacy.py --attack C_DEA --dataset xsum', 
       res:  `The result is:\n
-      'reject_rate': 0.0,\n
+      'reject_rate': 0.0%,\n
        'average_similarity': np.float64(0.7156997561454773), \n
        'top_likelihood': [1.287193775177002, 1.285073161125183, 1.1244521141052246, 1.060809850692749, 0.8936325907707214, 0.8717283010482788, 0.6704179048538208, 0.5667109489440918, 0.4760924279689789, 0.4359148442745209]\n
        \nThe meaning of the results:
